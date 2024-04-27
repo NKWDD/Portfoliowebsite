@@ -1,0 +1,253 @@
+/* 
+  Auteur: Kamil Kala
+  Opdracht: Praktijk opdracht
+  Datum: 01-12-2023
+*/
+
+body 
+{
+  background-color: rgb(0, 0, 0); /* Zwarte achtergrondkleur */
+  margin: 0; /* Geen marges rondom de body */
+  font-family:  'Roboto','Noto Serif Vithkuqi', 'Open Sans', 'Poppins', sans-serif; /* Lettertype voor de body */
+  overflow-x: hidden; /* Schakel overflow voor de breedte uit */
+}
+
+/* Opmaak voor het header element */
+header 
+{
+display: flex; /* Instellingen voor flexibele opmaak */
+align-items: center; /* Centreren van inhoud verticaal binnen het flex-container */
+padding-top: 10px; /* Bovenmarge instellen voor het header element */
+}
+
+/* Opmaak voor het logo binnen de header */
+.logo 
+{
+  margin-left: 25px; /* Linkermarge voor het logo in de header */
+}
+
+/* Opmaak voor het logo in de header */
+.logo img 
+{
+  width: 85%; /* Logo vergroot */
+  margin-bottom: 100px; /* Ruimte onder het logo */
+}
+
+/* Opmaak voor het navigatiemenu */
+nav 
+{
+  display: flex; /* Instellingen voor flexibele opmaak */
+  align-items: center; /* Centreren van inhoud verticaal binnen het flex container */
+  margin-bottom: 150px; /* Ruimte onder het navigatiemenu */
+}
+
+/* Opmaak voor de menu items binnen het navigatiemenu */
+nav a 
+{
+  text-decoration: none; /* Verwijder de onderlijnen van de tekst */
+  color: white; /* Zwarte tekstkleur voor de menu items */
+  margin: 0 15px; /* Linkermarge voor de menu items */
+}
+
+/* Opmaak voor de menu items binnen het navigatiemenu */
+nav a 
+{
+  font-size: 30px; /* Grootte van de tekst vergroten */
+  margin: 0 25px; /* Linkermarge voor de menu items */
+  text-decoration: none; /* Verwijder de onderlijnen van de tekst */
+  font-weight: bold; /* Vetgedrukte tekststijl */
+  color: #ffc107; /* Gele tekstkleur voor de menu items */
+}
+
+/* Opmaak voor de menu items binnen het navigatiemenu bij hover */
+nav a:hover 
+{
+  color: white; /* Tekstkleur veranderen bij hover */
+  transition: 0.5s; /* Vloeiende overgang van kleur bij hover */
+}
+
+/* Opmaak voor de ul elementen binnen het navigatiemenu */
+ul 
+{
+  list-style-type: none; /* Verwijder de lijststijl van de lijstitems */
+  padding: 0; /* Instellen van geen padding */
+}
+
+/* Opmaak voor de li elementen binnen het navigatiemenu */
+li 
+{
+  display:inline-block; /* Instellen van weergave als inline-block element */ 
+  margin-right: 15px; /* Instellen van de rechtermarge op 15 pixels */
+}
+
+/* Opmaak voor het zoekgedeelte in de header */
+#search-container 
+{
+  display: flex; /* Flexibele opmaak instellen voor het flex-container */
+  align-items: center; /* Centreren van inhoud verticaal binnen het flex-container */
+}
+
+/* Opmaak voor het zoekvak */
+#search-box 
+{
+  margin-right: 10px; /* Linkermarge voor het zoekvak */
+  padding: 5px; /* Padding instellen voor het zoekvak */
+  margin-bottom: 150px; /* Ruimte onder het zoekvak */
+  border-radius: 10px; /* Randen aan het zoekvak */
+}
+
+/* Opmaak voor de zoekknop */
+#search-btn 
+{
+  padding: 5px 10px; /* Padding instellen voor de zoekknop */
+  background-color: black; /* Zwarte achtergrondkleur voor de zoekknop */
+  border: none; /* Verwijder de randen van de zoekknop */
+  cursor: pointer; /* Cursor instellen voor de zoekknop */
+  margin-bottom: 150px; /* Ruimte onder de zoekknop */
+}
+
+/* Opmaak voor font size binnen zoekknop */
+#search-container i 
+{
+  font-size: 25px; /* Grootte van de tekst vergroten */
+}
+
+/* Opmaak voor figure-elementen */
+figure 
+{
+  margin: 0; /* Geen marge */
+}
+
+/* Opmaak voor afbeelding van basketballende persoon */
+.playing-basketball img 
+{
+  width: 100%; /* Breedte van de afbeelding */
+  max-width: 8000px; /* Maximale breedte van de afbeelding */
+  height: auto; /* Hoogte van de afbeelding */
+  max-height: 650px; /* Maximale hoogte van de afbeelding */
+  display: block; /* Zet de afbeelding in een blok */
+  margin: 0 auto; /* Centreert de afbeelding binnen de beschikbare ruimte */
+  filter: brightness(70%); /* Donkere filter toevoegen */
+}
+
+/* Opmaak voor tekst-overlay op de afbeelding */
+.text-overlay 
+{
+  position: absolute; /* Absolute positionering van het element */
+  top: 50%; /* Verticale uitlijning in het midden van het bovenliggende element */
+  left: 50%; /* Horizontale uitlijning in het midden van het bovenliggende element */
+  transform: translate(-50%, -50%); /* Transformeren om het element precies in het midden te plaatsen */
+  z-index: 1; /* Z-index om de stapelvolgorde van het element in te stellen */
+  color: #ffc107; /* Gele tekstkleur */
+  font-size: 50px; /* Grootte van de tekst vergroten */
+  text-align: center; /* Centreren van tekst */
+  margin-top: 125px; /* Afstand vanaf de bovenkant van de afbeelding */
+  font-weight: bold; /* Vetgedrukte tekststijl */
+  cursor: pointer; /* Cursor instellen voor de tekst */
+}
+
+/* Opmaak voor de container van meest populaire items */
+.most-popular-container 
+{
+  display: flex; /* Flexibele opmaak instellen voor het flex-container */
+  margin-left: 25px; /* Linkermarge instellen op 25 pixels */
+  margin-right: 25px; /* Rechtermarge instellen op 25 pixels */
+  margin-bottom: 150px; /* Ruimte onder de container */
+}
+
+/* Opmaak voor meest populaire items die in de aanbieding zijn */
+.most-popular-on-sale h2 
+{
+  color: #ffc107; /* Gele tekstkleur voor de kop */
+  margin-left: 25px; /* Linkermarge voor de kop */
+  margin-top: 100px; /* Afstand vanaf de bovenkant van de container */
+}
+
+.most-popular-container figure 
+{
+  margin-right: 25px; /* Rechtermarge instellen op 25 pixels */
+  margin-left: 25px; /* Linkermarge instellen op 25 pixels */
+}
+
+.most-popular-container img 
+{
+  width: 100%; /* Breedte van de afbeelding */
+  height: auto; /* Hoogte van de afbeelding */
+  cursor: pointer; /* Cursor instellen voor de afbeelding */
+}
+
+.most-popular-container figcaption 
+{
+  color: #ffc107; /* Gele tekstkleur voor de bijschrifttekst */
+  margin-top: 10px; /* Afstand vanaf de bovenkant van de afbeelding */
+}
+
+.most-popular-container a 
+{
+  color: #ffc107; /* Gele tekstkleur voor de links binnen de container */
+  margin-left: 15%; /* Linkermarge voor de links binnen de container */
+}
+
+/* Opmaak voor het footer-element */
+footer 
+{
+  width: 100%;
+  display: flex; /* Flexibele opmaak instellen voor het flex-container */
+  background-color: #ffc107; /* Gele achtergrondkleur */
+  padding: 20px; /* Padding instellen voor de container */
+  color: #333; /* Donkere tekstkleur */
+  bottom: 0; /* Positioneer het element aan de onderkant van het bovenliggende element */
+}
+
+/* Opmaak voor het studenten-gedeelte in de footer */
+.footer-student 
+{
+  display: flex; /* Flexibele opmaak instellen voor het flex-container */
+  flex-direction: column; /* Verticaal uitlijnen van de inhoud binnen het flex container */
+}
+
+.footer-student a {
+  margin: 5px 0; /* Afstand vanaf de bovenkant van de container */
+  margin-left: 25px; /* Linkermarge voor de links binnen de container */
+  font-size: 16px; /* Grootte van de tekst vergroten */
+  font-weight: bold; /* Vetgedrukte tekststijl */
+  text-decoration: none; /* Verwijder de onderlijnen van de tekst */
+  color: black; /* Zwarte tekstkleur voor de links binnen het studenten-gedeelte */
+}
+
+/* Opmaak voor het medewerkers-gedeelte in de footer */
+.footer-medewerker 
+{
+  display: flex; /* Flexibele opmaak instellen voor het flex-container */ 
+  flex-direction: column; /* Verticaal uitlijnen van de inhoud binnen het flex container */
+}
+
+.footer-medewerker a 
+{
+  margin: 5px 0; /* Afstand vanaf de bovenkant van de container */
+  margin-left: 25px; /* Linkermarge voor de links binnen de container */
+  font-size: 16px; /* Grootte van de tekst vergroten */
+  font-weight: bold; /* Vetgedrukte tekststijl */
+  text-decoration: none; /* Verwijder de onderlijnen van de tekst */
+  color: black; /* Zwarte tekstkleur voor de links binnen het medewerkers-gedeelte */
+}
+
+/* Opmaak voor de sectie met nuttige links in de footer */
+.links 
+{
+  font-size: 26px; /* Grootte van de tekst vergroten */
+  margin-left: 380px; /* Afstand vanaf de linkerkant van de footer */
+  margin-top: 50px; /* Afstand vanaf de bovenkant van de footer */
+}
+
+.links i 
+{
+  margin-right: 20px; /* Meer ruimte tussen de icoontjes */
+}
+
+.links p {
+  font-weight: bold; /* Vetgedrukte tekststijl */
+  font-size: 16px; /* Grootte van de tekst vergroten */
+  display: block; /* Zet de tekst in een blok */
+  margin-left: 10px; /* Linkermarge voor de tekst */
+}

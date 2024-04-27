@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Auteur:         Kamil Kala 
+Aanmaakdatum:  22-01-2024
+
+-->
+<html>
+    <head>
+      <title>Resultatenpagina</title>
+        <!-- Documenttype en taalinstelling -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Porftolio Website - Kamil Kala">
+        <link id="stylesheet" href="../styles/dark-theme.css" rel="stylesheet">
+        <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+        <script src="scripts/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+        <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+        <script src="../javascript/javascript.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <!-- Logo en navigatiemenu voor mobiel -->
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+              <!-- Navigatiemenu-items -->
+              <li><a href="../index.html">Startpagina</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./hobby's.html">Hobby’s</a></li>
+              <li><a href="./resultaten.html">Resultaten</a></li>
+              <li><a href="./ervaringen.html">Ervaringen</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+      </header>
+      <main class="resultaten">
+        <h1>Resultaten</h1>
+    <article>
+      <div id="container-resultaten">
+        <div id="iframe-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.3277484674486!2d5.281785875558855!3d51.690447140706674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee883afe78bb%3A0xc7562d84a5056fa0!2sKoning%20Willem%20I%20College!5e0!3m2!1sen!2snl!4v1705629219394!5m2!1sen!2snl" width="625" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      
+        <div id="text-container">
+          <a href="https://www.kw1c.nl/" target="_blank"><h2>Koning Willem I College</h2></a>
+        </div>
+      </div>
+    </article>
+  </main>
+    <footer>
+      <div id="javascriptcopyright">&copy; Kamil K.R Kala kamil.kala-edu@kw1c.nl<i class="fa-solid fa-rocket" style="color: #ffffff;"></i></div>
+    </footer>
+</body>
+</html>

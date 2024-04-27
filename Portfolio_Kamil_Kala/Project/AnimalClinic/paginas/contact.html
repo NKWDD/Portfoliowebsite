@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Documenttype en taalinstelling -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Animal Clinic - De Beste Dierenkliniek in Nederland">
+
+<!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+<link rel="stylesheet" href="../styles/contact-inloggen.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Koppeling naar lettertypen via Google Fonts en FontAwesome CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@700&family=Open+Sans:wght@700&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+<!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+<script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+<script src="../JavaScript/javascript.js"defer></script>
+
+<!-- Titel van de webpagina -->
+<title>Animal Clinic</title>
+</head>
+<body>
+<!-- Header Section -->
+<section class="header">
+        <!-- Logo en navigatiemenu voor mobiel -->
+    <nav>
+        <a href="../index.html"><img src="../images/Logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="afspraakmaken.html">AFSPRAAK MAKEN</a></li>
+                <li><a href="onze-kliniek.html">ONZE KLINIEK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="btn-inloggen"><a href="inloggen.html">INLOGGEN</a></li>
+            </ul>
+        </div>
+        <i class="fa solid fa-bars" id="navLinks" onclick="showmenu()"></i>
+    </nav>
+
+    <!-- Contact Section -->
+<div class="container-contact">
+<h1>Neem Contact</h1>
+<p>We zouden graag op je vragen willen reageren en je helpen. Voel je vrij om contact met ons op te nemen.</p>
+<div class="contact-box">
+    <div class="contact-links">
+        <h3>Stuur je verzoek</h3>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="input-row">
+                <div class="input-groep">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" placeholder="Naam" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <label for="message">Bericht:</label>
+                    <textarea id="message" name="message" placeholder="Jouw bericht" required></textarea>
+
+                    <input type="submit" value="Verzenden">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="output"></div>
+<div class="contact-rechts">
+    <h3>Bereik ons</h3>
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td>Animalclinic@gmail.com</td>        
+        </tr>
+        <tr>
+            <td>Telefoon:</td>
+            <td>&nbsp;+31674523158</td>        
+        </tr>
+        <tr>
+            <td>Adres:</td>
+            <td>Onderwijsboulevard 3, 5223 DE 's-Hertogenbosch</td>                         
+        </tr>
+    </table>
+</div>
+</div>
+</div>
+</section>
+<hr>
+<section class="social-media">
+<!-- Moduleheader: Deze sectie bevat informatie over de kliniek en sociale media-pictogrammen -->
+<h4>About Us</h4>
+<p>Bij Animal Clinic zijn we meer dan alleen een dierenkliniek; we zijn een toegewijd team van dierenliefhebbers die gepassioneerd zijn over het bieden van uitzonderlijke zorg voor uw geliefde huisdieren.</p>
+<!-- Pictogrammen voor sociale media met koppelingen naar externe websites -->
+<div class="icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #e68200;"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" style="color: #e68200;"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #e68200;"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in" style="color: #e68200;"></i></a>
+</div>
+<p>Gemaakt door Kamil<i class="fas fa-rocket" style="color: #e68200;"></i></p>
+</section>
+</body>
+</html>

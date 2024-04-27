@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Auteur:      Kamil Kala    
+Aanmaakdatum:  22-1-2024
+
+-->
+<html>
+    <head>
+      <title>
+        Kamil Kala
+      </title>
+        <!-- Documenttype en taalinstelling -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Porftolio Website - Kamil Kala">
+        <link id="stylesheet" href="styles/dark-theme.css" rel="stylesheet">
+        <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+        <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+        <script src="javaScript/javascript.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <i class="fa-solid fa-toggle-off" style="color: #fec470;" id="lightModeBtn" onclick="switchToLightMode()" disabled style="display: none;"></i>
+        <i class="fa-solid fa-toggle-on" style="color: #fec470;" id="darkModeBtn" onclick="switchToDarkMode()" disabled style="display: inline-block;"></i>
+        <nav>
+          <!-- Logo en navigatiemenu voor mobiel -->
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+              <!-- Navigatiemenu-items -->
+              <li><a href="./index.html">Startpagina</a></li>
+              <li><a href="./paginas/portfolio.html">Portfolio</a></li>
+              <li><a href="./paginas/hobby's.html">Hobby’s</a></li>
+              <li><a href="./paginas/resultaten.html">Resultaten</a></li>
+              <li><a href="./paginas/ervaringen.html">Ervaringen</a></li>
+              <li><a href="./paginas/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+      </header>
+      <div class="content-container">
+        <div id="kamilkala">
+          <div class="logo1">
+            <img src="./images/Astronaut.png" alt="Logo">
+          </div>
+          <h1>Kamil Kala</h1>
+          <h3 id="color-yellow">Student</h3>
+          <h3>Software</h3>
+          <h3>Developer</h3>
+        </div>
+        <div class="logo"></div>
+      </div>
+      <section class="kort-over-mij">
+        <div class="kort-over-mij-text">
+          <figure>
+            <div class="me-pic"></div>
+            <figcaption>
+              <h2>Kort over mij</h2>
+              <p>Welkom op mijn website!<br>
+                <br>
+                Leuk dat je de tijd neemt om een kijkje te nemen op mijn online website! Mijn naam is Kamil Kala, 19 jaar oud, en ik studeer op Koning Willem I College Den Bosch. Als student van software developer, heb ik mijn website gecreëerd om mijn ervaringen, creaties en interesses met jou te delen. Ik heb al meer diploma’s in mijn zak. In 2019-2021 was ik student van ROC de Leijgraaf toen heb ik mijn diploma assistent-medewerker gehaald. In 2021-2023 begon ik bij Koning Willem I College als student financiële administratie. In die tijd heb ik stages gelopen in grote en internationale bedrijven zoals Eterna Europe BV of Judo Bond Nederland. Momenteel volg ik Software Developer opleiding bij KW1C in Den Bosch. Tijdens deze opleiding heb ik al veel ervaring opgedaan door te werken aan verschillende projecten die kan je zien bij link “Portfolio”. Alle projecten zijn met goede resultaat afgesloten! Momenteel heb ik er geen bijbaan, maar ik ben wel vrijwilliger bij Judo Bond Nederland waar ik help met organiseren van judo/karate/aikido wedstrijden. Ik ben ook in bezit van een geldige rijbewijs B. Ik kan vloeiend Nederlands, Pools praten en ook Engels. Mijn hobby’s zijn vooral sportschool en af en toe basketbal ook vind ik alle soorten designen heel leuk. Als je meer over mij of over mijn projecten/resultaten wil weten kijk dan bovenop zie je vier linken naar externe pagina’s. </p>
+            </figcaption>
+            <div class="logo2">
+              <img src="./images/photo.jpg" alt="Logo">
+            </div>
+          </figure>
+        </div>
+      </section>
+      <footer>
+        <div id="javascriptcopyright">&copy; Kamil K.R Kala kamil.kala-edu@kw1c.nl<i class="fa-solid fa-rocket" style="color: #ffffff;"></i></div>
+      </footer>
+</body>
+</html>

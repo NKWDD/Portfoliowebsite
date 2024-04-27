@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Auteur:          Kamil Kala
+Aanmaakdatum:  22-01-2024
+
+-->
+<html>
+    <head>
+      <title>
+        Kamil Kala
+      </title>
+        <!-- Documenttype en taalinstelling -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Porftolio Website - Kamil Kala">
+        <link id="stylesheet" href="../styles/dark-theme.css" rel="stylesheet">
+        <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+        <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+        <script src="../javascript/javascript.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <!-- Logo en navigatiemenu voor mobiel -->
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+              <!-- Navigatiemenu-items -->
+              <li><a href="/index.html">Startpagina</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./hobby's.html">Hobby’s</a></li>
+              <li><a href="./resultaten.html">Resultaten</a></li>
+              <li><a href="./ervaringen.html">Ervaringen</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+      </header>
+      <section class="contact">
+        <div class="kort-over-mij-text">
+          <figure>
+            <div class="container">
+              <!-- Afspraakformulier -->
+              <form id="appointmentForm-afspraak">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" placeholder="Naam" required> <br>
+        
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Email" required> <br>
+        
+                <label for="message">Bericht</label>
+                <textarea id="message" name="message" placeholder="Jouw bericht" required></textarea>
+                <br>
+                <button id="verstuurKnop-afspraak" type="submit">Versturen</button>
+              </form>
+            </div>
+            <figcaption class="contact-text">
+              <h2>Contact</h2>
+              <p>
+                Als mijn werk als software developer je interesse heeft gewekt en je graag meer wilt weten over mijn projecten, vaardigheden of wellicht een mogelijke samenwerking, aarzel dan niet om contact op te nemen. Ik ben enthousiast om mijn ervaring en kennis met je te delen.
+                Je kunt me bereiken door het onderstaande formulier in te vullen. Ik ben altijd beschikbaar om vragen te beantwoorden en met je te praten over eventuele samenwerkingsmogelijkheden.
+              </p>
+              <p><i class="fa-regular fa-envelope fa-bounce" style="color: #fec470;"></i>&nbsp;&nbsp;Kamilkala125@gmail.com</p>
+              <p><i class="fa-regular fa-comment-dots fa-bounce" style="color: #fec470;"></i>&nbsp;&nbsp;<span class="color-yellow">+31</span>658926449</p>
+              <p><a href="https://www.linkedin.com/in/kamil-kala-178504228/" target="_blank"><i class="fa-brands fa-linkedin fa-bounce" style="color: #fec470;"></i>&nbsp;&nbsp;Kamil Kala</p></a> 
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <footer>
+        <div id="javascriptcopyright">&copy; Kamil K.R Kala kamil.kala-edu@kw1c.nl<i class="fa-solid fa-rocket" style="color: #ffffff;"></i></div>
+      </footer>
+</body>
+</html>

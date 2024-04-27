@@ -1,0 +1,1032 @@
+/* Algemene opmaak die van toepassing is op alle elementen op de webpagina */
+* 
+{
+    margin: 0; /* Geen marges rondom elementen. */
+    padding: 0; /* Geen padding (binnenmarges) rondom elementen. */
+    font-family: 'Poppins', sans-serif; /* Lettertype voor alle tekst op de pagina. */
+}
+
+/* Opmaak voor de headersectie */
+.header 
+{
+    min-height: 100vh; /* Minimale hoogte van 100% van het scherm. */
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../images/istockphoto-533229488-1024x1024.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+/* Opmaak voor de navigatiebalk */
+nav 
+{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stijlen om het menu te tonen wanneer het actief is */
+.nav-links.active 
+{
+    right: 0; /* Verschuif het menu naar rechts om het te tonen wanneer actief. */
+}
+
+/* Stijlen om het menu te verbergen wanneer het niet actief is */
+.nav-links 
+{
+    right: -200px; /* Verschuif het menu naar links om het te verbergen wanneer niet actief. */
+    transition: right 0.3s; /* Voeg een soepele overgang toe aan het verbergen en tonen van het menu. */
+}
+
+/* Opmaak voor het logo in de navigatiebalk */
+nav img 
+{
+    width: 150px; /* Breedte van het logo. */
+    border-radius: 100px; /* Ronde hoeken van het logo. */
+}
+
+/* Opmaak voor de "Inloggen" knop */
+.btn-inloggen 
+{
+    width: 60px; /* Breedte van de knop. */
+    height: 50%; /* Hoogte van de knop. */
+    background: transparent; /* Transparante achtergrond van de knop. */
+    border: 2px solid #e68200; /* Rand met kleur #e68200. */
+    outline: none; /* Verwijder de standaard focusstijl. */
+    border-radius: 6px; /* Ronde hoeken van de knop. */
+    margin-left: 10px; /* Linkerafstand van de knop. */
+    transition: 0.5s; /* Voeg een overgang toe aan de knop voor hover-effect. */
+}
+
+/* Stijlen voor de "Inloggen" knop wanneer erover wordt gehoverd */
+.btn-inloggen:hover 
+{
+    background-color: #e68200; /* Achtergrondkleur van de knop wanneer erover wordt gehoverd. */
+}
+
+/* Opmaak voor de navigatielinks */
+.nav-links 
+{
+    flex: 1; /* Flexibele indeling om zich aan te passen aan de beschikbare ruimte. */
+    text-align: right; /* Tekst wordt aan de rechterkant van het scherm uitgelijnd. */
+}
+
+/* Opmaak voor de lijstitems in de navigatielinks */
+.nav-links ul li 
+{
+    list-style: none; /* Verwijder de standaard lijststijl. */
+    display: inline-block; /* Lijstitems worden naast elkaar weergegeven. */
+    padding: 8px 12px; /* Binnenmarges van de lijstitems. */
+    position: relative; /* De positie is relatief voor positionele aanpassingen. */
+    top: -50px; /* Verplaats lijstitems naar boven om de gewenste uitlijning te bereiken. */
+}
+
+/* Opmaak voor de ankertags in de navigatielinks */
+.nav-links ul li a 
+{
+    color: #fff; /* Tekstkleur van de ankertags. */
+    text-decoration: none; /* Verwijder de onderstreping van ankertags. */
+    font-size: 13px; /* Lettergrootte van de ankertags. */
+}
+
+/* Stijlen voor het onderstrepen van de lijstitems bij hover */
+.nav-links ul li::after 
+{
+    content: ''; /* Pseudo-element voor het creëren van onderstreping. */
+    width: 0px; /* Beginbreedte van de onderstreping. */
+    height: 2px; /* Hoogte van de onderstreping. */
+    background: #e68200; /* Kleur van de onderstreping. */
+    display: block; /* Laat het pseudo-element als een blok zien. */
+    margin: auto; /* Centreer het pseudo-element horizontaal. */
+    transition: 0.5s; /* Voeg een overgang toe voor het uitbreiden van de onderstreping. */
+}
+
+/* Stijlen voor het uitbreiden van de onderstreping bij hover */
+.nav-links ul li:hover::after 
+{
+    width: 100%; /* Breid de onderstreping uit tot de volledige breedte bij hover. */
+}
+
+/* Opmaak voor de tekstsectie in de header */
+.text-box 
+{
+    width: 90%; /* Breedte van de tekstsectie. */
+    color: rgb(255, 255, 255); /* Tekstkleur in de tekstsectie. */
+    position: absolute; /* Positioneel context voor exacte plaatsing. */
+    top: 50%; /* Verticaal gecentreerde plaatsing van de tekstsectie. */
+    left: 50%; /* Horizontaal gecentreerde plaatsing van de tekstsectie. */
+    transform: translate(-50%, -50%); /* Exacte centrale plaatsing van de tekstsectie. */
+    text-align: center; /* Centrale uitlijning van tekst in de tekstsectie. */
+}
+
+/* Opmaak voor de kop in de tekstsectie */
+.text-box h1 
+{
+    font-size: 62px; /* Grootte van de kop in de tekstsectie. */
+}
+
+/* Opmaak voor de paragraaf in de tekstsectie */
+.text-box p 
+{
+    margin: 10px 0 40px; /* Marges boven, onder en onder de paragraaf. */
+    font-size: 14px; /* Lettergrootte van de paragraaf. */
+    color: white; /* Tekstkleur van de paragraaf. */
+}
+
+/* Opmaak voor de "Over ons" knop */
+.overons-btn 
+{
+    display: inline-block; /* Weergave van de knop als een inline-blok. */
+    text-decoration: none; /* Geen onderstreping voor de knop. */
+    color: white; /* Tekstkleur van de knop. */
+    border: 1px solid white; /* Rand van de knop met witte kleur. */
+    padding: 12px 34px; /* Binnenmarges van de knop. */
+    font-size: 13px; /* Lettergrootte van de knop. */
+    background: transparent; /* Transparante achtergrond van de knop. */
+    position: relative; /* Positionele context voor positionele aanpassingen. */
+    cursor: pointer; /* Cursorstijl bij hover. */
+}
+
+/* Stijlen voor de "Over ons" knop bij hover */
+.overons-btn:hover 
+{
+    border: 1px solid #e68200; /* Randkleur van de knop bij hover. */
+    background: rgb(230, 130, 0); /* Achtergrondkleur van de knop bij hover. */
+    transition: 1s; /* Voeg een langzame overgang toe aan de knop bij hover. */
+}
+
+/* Verberg het menu-icoon op grotere schermen */
+nav .fa 
+{
+    display: none; /* Verberg het menu-icoon op grote schermen. */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor kopgrootte en navigatielinks op kleinere schermen */
+    .text-box h1 
+    {
+        font-size: 20px; /* Verklein de kopgrootte op kleinere schermen. */
+    }
+    .nav-links ul li 
+    {
+        display: block; /* Zet de navigatielinks in een kolom op kleinere schermen. */
+    }
+    .nav-links 
+    {
+        position: absolute; /* Plaats het menu buiten het zicht op kleinere schermen. */
+        background: #e68200; /* Achtergrondkleur van het menu. */
+        height: 100vh; /* Volledige hoogte van het scherm voor het menu. */
+        width: 200px; /* Breedte van het menu. */
+        top: 0; /* Plaats het menu bovenaan het scherm. */
+        right: -200px; /* Verberg het menu buiten het scherm. */
+        text-align: left; /* Links uitlijnen van het menu. */
+        z-index: 2; /* Z-index om het menu boven andere elementen te plaatsen. */
+        transition: 1s; /* Voeg een soepele overgang toe aan het menu. */
+    }
+    /* Toon het menu-icoon op kleinere schermen */
+    nav .fa 
+    {
+        display: block; /* Toon het menu-icoon op kleinere schermen. */
+        color: white; /* Tekstkleur van het menu-icoon. */
+        margin: 10px; /* Marge rondom het menu-icoon. */
+        font-size: 20px; /* Grootte van het menu-icoon. */
+        cursor: pointer; /* Cursorstijl voor het menu-icoon. */
+    }
+    .nav-links ul 
+    {
+        padding: 30px; /* Binnenmarges van de navigatielinks. */
+    }
+}
+
+/* Stijlen voor de sectie "Onze Specialiteit" */
+.specialiteit-box 
+{
+    margin-top: 5%; /* Bovenmarge van 5% voor de "Onze Specialiteit" sectie */
+    display: flex; /* Weergave als een flex-container om kolommen uit te lijnen */
+    justify-content: space-between; /* Verdeel de ruimte tussen de kolommen */
+}
+
+.onze-specialiteit 
+{
+    width: 80%; /* Breedte van 80% van de container */
+    margin: auto; /* Centreer de sectie in de container */
+    text-align: center; /* Centreer de tekst in de sectie */
+    padding-top: 100px; /* Bovenmarge van 100px voor de sectie */
+}
+
+/* Opmaak voor de kop in "Onze Specialiteit" */
+h1 
+{
+    font-size: 36px; /* Lettergrootte van 36 pixels */
+    font-weight: 600; /* Letterdikte van 600 (extra vet) */
+}
+
+/* Opmaak voor de tekst in "Onze Specialiteit" */
+.onze-specialiteit p 
+{
+    color: 525050; /* Tekstkleur in hexadecimale notatie */
+}
+
+/* Stijlen voor de kolommen in "Onze Specialiteit" */
+.specialiteit-col p 
+{
+    color: #fff; /* Tekstkleur wit */
+    font-size: 14px; /* Lettergrootte van 14 pixels */
+    font-weight: 300; /* Letterdikte van 300 (normaal) */
+    line-height: 22px; /* Regelhoogte van 22 pixels */
+    padding: 10px; /* Binnenste opvulling van 10 pixels */
+}
+
+.specialiteit-col 
+{
+    flex-basis: 31%; /* Basisbreedte van 31% van de container */
+    background-color: rgb(230, 130, 0); /* Achtergrondkleur in RGB-notatie */
+    border-radius: 10px; /* Afgeronde hoeken van 10 pixels */
+    margin-bottom: 5%; /* Ondermarge van 5% tussen kolommen */
+    padding: 20px 12px; /* Binnenste opvulling van 20 pixels boven en onder, 12 pixels aan de zijkanten */
+    box-sizing: border-box; /* De binnenste opvulling en randen worden niet toegevoegd aan de totale breedte */
+    transition: 0.5s; /* Overgangseffect van 0.5 seconden bij interactie */
+}
+
+/* Opmaak voor subkopjes in de kolommen */
+h3 
+{
+    text-align: center; /* Centreer de subkopjes */
+    font-weight: 600; /* Letterdikte van 600 (extra vet) */
+    margin: 10px 0; /* Boven- en ondermarge van 10px */
+    color: #fff; /* Tekstkleur wit */
+}
+
+/* Stijlen voor het tonen van schaduw bij hover in de kolommen */
+.specialiteit-col:hover 
+{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1); /* Toon een schaduw met specifieke eigenschappen bij het zweven over de kolommen */
+}
+
+/* Stijl voor onderstreping */
+.onderstreep 
+{
+    text-decoration: underline; /* Tekst wordt onderstreept */
+}
+
+/* Stijl voor vetgedrukte tekst */
+.vetgedrukt 
+{
+    font-weight: bold; /* Maak de tekst vetgedrukt */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor de "Onze Specialiteit" sectie op kleinere schermen */
+    .specialiteit-box 
+    {
+        flex-direction: column; /* Verander de richting van flex-container naar kolommen op kleinere schermen */
+    }
+}
+
+/* Kliniek*/
+
+/* Stijlen voor de algemene Kliniek sectie */
+.kliniek 
+{
+    width: 80%; /* Breedte van 80% van de container */
+    margin: auto; /* Centreer de sectie in de container */
+    text-align: center; /* Centreer de tekst in de sectie */
+    padding-top: 50px; /* Bovenmarge van 50px voor de sectie */
+}
+
+/* Opmaak voor de container met afbeeldingen in de Kliniek sectie */
+.afbeeldingen-van-kliniek 
+{
+    margin-top: 5%; /* Bovenmarge van 5% tussen secties */
+    display: flex; /* Weergave als een flex-container om kolommen uit te lijnen */
+    justify-content: space-between; /* Verdeel de ruimte tussen de kolommen */
+}
+
+/* Opmaak voor individuele kolommen in de Kliniek sectie */
+.kliniek-col 
+{
+    flex-basis: 32%; /* Basisbreedte van 32% van de container */
+    border-radius: 10px; /* Afgeronde hoeken van 10 pixels */
+    margin-bottom: 30px; /* Ondermarge van 30px tussen kolommen */
+    position: relative; /* Behoud de positie van het element in de stroom van het document */
+    overflow: hidden; /* Verberg eventuele overlopende inhoud binnen de kolommen */
+}
+
+/* Opmaak voor afbeeldingen in de kolommen */
+.kliniek-col img 
+{
+    width: 100%; /* Breedte van 100% van de kolom */
+    display: block; /* Maak de afbeelding een blokelement om marges correct toe te passen */
+}
+
+/* Opmaak voor figcaptions onder afbeeldingen */
+figcaption 
+{
+    margin-top: 2%; /* Bovenmarge van 2% tussen figcaptions en afbeeldingen */
+    color: rgb(0, 0, 0); /* Tekstkleur in RGB-notatie (zwart) */
+    font-style: italic; /* Cursieve tekststijl */
+    font-size: 20px; /* Lettergrootte van 20 pixels */
+}
+
+/* Media query voor schermgroottes tot 1170px breedte */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassing van de afbeeldingen container naar een kolomindeling */
+    .afbeeldingen-van-kliniek {
+        flex-direction: column; /* Verander de richting van flex-container naar kolommen op kleinere schermen */
+    }
+}
+
+/*Grafiek van Excel*/
+
+/*Siijlen voor Grafiek*/
+.grafiek
+{
+    width: 80%; /* Breedte van 80% van de container */
+    margin: auto; /* Centreer de sectie in de container */
+    text-align: center; /* Centreer de tekst in de sectie */
+    padding-top: 50px; /* Bovenmarge van 50px voor de sectie */
+}
+
+.grafiek img
+{
+    border: 2px solid; /*maak een border rond img*/
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) {
+    .grafiek 
+    {
+        width: 95%; /* Breedte van 100% van de container om de volledige breedte te benutten */
+        text-align: center; /* Centreer de tekst in de sectie */
+        padding-top: 50px; /* Bovenmarge van 50px voor de sectie */
+    }
+
+    .grafiek img 
+    {
+        width: 95%; /* Laat de afbeelding de volledige breedte van de container gebruiken */
+        max-width: 95%; /* Zorg ervoor dat de afbeelding niet groter wordt dan de oorspronkelijke grootte */
+    }
+}
+
+/* Reviews */
+
+/* Stijlen voor de sectie "Reviews" */
+.reviews 
+{
+    width: 80%; /* Breedte van 80% van de container */
+    margin: auto; /* Centreer de sectie in de container */
+    padding-top: 100px; /* Bovenmarge van 100px voor de sectie */
+    text-align: center; /* Centreer de tekst in de sectie */
+}
+
+/* Stijlen voor de "Reviews" vakken */
+.reviews-box 
+{
+    margin-top: 5%; /* Bovenmarge van 5% tussen secties */
+    display: flex; /* Weergave als een flex-container om kolommen uit te lijnen */
+    justify-content: space-between; /* Verdeel de ruimte tussen de kolommen */
+}
+
+/* Stijlen voor individuele "Review" vakken */
+.reviews-col 
+{
+    flex-basis: 44%; /* Basisbreedte van 44% van de container */
+    border-radius: 10px; /* Afgeronde hoeken van 10 pixels */
+    margin-bottom: 5%; /* Ondermarge van 5% tussen vakken */
+    text-align: left; /* Links uitlijnen van de tekst in de vakken */
+    background: #ff9100; /* Achtergrondkleur in hexadecimale notatie */
+    padding: 25px; /* Binnenste opvulling van 25px in vakken */
+    cursor: pointer; /* Wijzig de cursor naar een handje om interactie aan te geven */
+    display: flex; /* Weergave als een flex-container om elementen binnenin uit te lijnen */
+}
+
+/* Stijlen voor het icoon in "Review" vakken */
+.reviews-col img 
+{
+    height: 40px; /* Hoogte van het icoon van 40 pixels */
+    margin-left: 5px; /* Bovenmarge van 5px aan de linkerkant */
+    margin-right: 30px; /* Bovenmarge van 30px aan de rechterkant */
+    border-radius: 50%; /* Afgeronde hoeken van 50% om een cirkelvormig icoon te maken */
+    padding: 0; /* Geen extra opvulling rond het icoon */
+}
+
+/* Stijlen voor de kop in "Review" vakken */
+.reviews-col h3 
+{
+    color: #fff; /* Tekstkleur wit */
+    margin-top: 15px; /* Bovenmarge van 15px */
+    text-align: left; /* Links uitlijnen van de tekst */
+}
+
+/* Stijlen voor tekst in "Review" vakken */
+.reviews-col p 
+{
+    color: rgb(255, 255, 255); /* Tekstkleur in RGB-notatie (wit) */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor "Reviews" sectie op kleinere schermen */
+    .reviews-box 
+    {
+        flex-direction: column; /* Verander de richting van flex-container naar kolommen op kleinere schermen */
+    }
+
+    /* Aanpassingen voor het icoon op kleinere schermen */
+    .reviews-col img 
+    {
+        margin-left: -15px; /* Aanpassing van de marge aan de linkerkant voor betere uitlijning op kleinere schermen */
+        margin-right: 15px; /* Aanpassing van de marge aan de rechterkant voor betere uitlijning op kleinere schermen */
+    }
+}
+
+/* Stijlen voor de sectie "Pagina Afspraak Maken" */
+.header-afspraak 
+{
+    min-height: 140vh; /* Minimale hoogte van 140% van de viewporthoogte voor schermhoogte */
+    width: 100%; /* Breedte van 100% van de container */
+    height: 1100px; /* Vaste hoogte van 1100 pixels voor schermen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../images/istockphoto-1434984578-2048x2048.dogandcat.jpg); /* Achtergrondafbeelding met overgangskleur en afbeelding-url */
+    background-size: cover; /* Schaal de achtergrondafbeelding om de hele sectie te bedekken */
+    position: relative; /* Stel de positionele context in op 'relatief' voor absolute positioneringselementen */
+}
+
+/* Stijlen voor tekstvak in "Pagina Afspraak Maken" */
+.text-box-afspraak hr 
+{
+    display: none; /* Hiermee wordt de <hr> niet zichtbaar */
+}
+
+/* Stijlen voor de container in "Pagina Afspraak Maken" */
+.container 
+{
+    width: 100%; /* Breedte van 100% van de container */
+    height: 100vh; /* Hoogte van 100% van de viewporthoogte */
+    display: flex; /* Weergave als een flex-container om inhoud uit te lijnen */
+    align-items: center; /* Verticaal centreren van de inhoud in de container */
+    justify-content: center; /* Horizontaal centreren van de inhoud in de container */
+}
+
+/* Stijlen voor het formulier in "Pagina Afspraak Maken" */
+form
+{
+    background: #fff; /* Achtergrondkleur wit */
+    display: flex; /* Weergave als een flex-container om formulierelementen uit te lijnen */
+    flex-direction: column; /* Stapel formulierelementen verticaal */
+    padding: 2vw 4vw; /* Binnenste opvulling van 2% van de breedte aan de boven- en onderkant en 4% van de breedte aan de zijkanten */
+    width: 90%; /* Breedte van 90% van de container */
+    max-width: 600px; /* Maximale breedte van 600 pixels voor formulier */
+    border-radius: 10px; /* Afgeronde hoeken van 10 pixels */
+}
+
+/* Stijlen voor de knop in "Pagina Afspraak Maken" */
+form button 
+{
+    padding: 15px; /* Binnenste opvulling van 15px rond de knop */
+    background-color: #e68200; /* Achtergrondkleur in hexadecimale notatie */
+    color: #fff; /* Tekstkleur wit */
+    font-size: 18px; /* Tekstgrootte van 18 pixels */
+    border: 0; /* Geen rand om de knop */
+    outline: none; /* Verwijder de focusomtrek */
+    cursor: pointer; /* Wijzig de cursor naar een handje om interactie aan te geven */
+    width: 150px; /* Breedte van 150 pixels voor de knop */
+    margin: 20px auto 0; /* Bovenmarge van 20px, geen zijmarges en geen ondermarge */
+    border-radius: 30px; /* Afgeronde hoeken van 30 pixels voor de knop */
+}
+
+/* Stijlen voor tekstvak in "Pagina Afspraak Maken" */
+.text-box-afspraak 
+{
+    width: 100%; /* Breedte van 100% van de container */
+    color: white; /* Tekstkleur wit */
+    position: absolute; /* Absolute positionering voor nauwkeurige plaatsing */
+    left: 50%; /* Horizontale uitlijning in het midden */
+    transform: translate(-50%,-50%); /* Horizontale en verticale uitlijning in het midden */
+    text-align: center; /* Centreer de tekst in het tekstvak */
+}
+
+/* Stijlen voor labels in het formulier */
+label 
+{
+    font-weight: bold; /* Vetgedrukte tekst voor labels */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor "Pagina Afspraak Maken" sectie op kleinere schermen */
+    .header-afspraak 
+    {
+        min-height: 100vh; /* Aangepast voor betere weergave op kleinere schermen */
+        height: auto; /* Automatische hoogte voor flexibiliteit */
+    }
+    .text-box-afspraak h1 
+    {
+        font-size: 20px; /* Kleinere lettergrootte voor kop op kleinere schermen */
+        margin-top: 50px; /* Bovenmarge van 50px op kleinere schermen */
+    }
+    .text-box-afspraak p li 
+    {
+        font-size: 15px; /* Kleinere lettergrootte voor lijstitems op kleinere schermen */
+    }
+    .text-box-afspraak hr 
+    {
+        display: none; /* De horizontale lijn (hr) weergeven op kleinere schermen */
+    }
+    .container 
+    {
+        margin-top: 250px; /* Voeg wat ruimte toe aan de container op kleinere schermen */
+    }
+    form 
+    {
+        width: 85%; /* Volledige breedte voor formulier op kleinere schermen */
+    }
+    form button 
+    {
+        width: 85%; /* Volledige breedte voor knop op kleinere schermen */
+    }
+    .text-box-afspraak 
+    {
+        width: 100%; /* Volledige breedte voor tekstvak op kleinere schermen */
+        left: 0; /* Linker uitlijning van het tekstvak */
+        transform: none; /* Reset de transformatie op kleinere schermen */
+    }
+    input[type="checkbox"] 
+    {
+        margin-right: 0; /* Terugzetten naar standaard op kleinere schermen */
+    }
+
+    .container input 
+    {
+        width: 85%; /* Volledige breedte voor invoervelden op kleinere schermen */
+    }
+
+    .label-naam-dier, .label-leeftijd-dier, .label-gevaccineerd, .label-afspraak-datum, .label-noodgeval 
+    {
+        font-weight: normal; /* Terugzetten naar standaard op kleinere schermen */
+    }
+}
+
+/* Stijlen voor de sectie "Onze Kliniek" */
+.header-kliniek 
+{ 
+    min-height: 100vh; /* Minimale hoogte van 100% van de viewporthoogte voor schermhoogte */
+    width: 100%; /* Breedte van 100% van de container */
+    height: 1000px; /* Vaste hoogte van 1000 pixels voor schermen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../images/istockphoto-1404300806-2048x2048jam.jpg); /* Achtergrondafbeelding met overgangskleur en afbeelding-url */
+    background-size: cover; /* Schaal de achtergrondafbeelding om de hele sectie te bedekken */
+    position: relative; /* Stel de positionele context in op 'relatief' voor absolute positioneringselementen */
+}
+
+/* Stijlen voor het tekstvak */
+.text-box-kliniek 
+{
+    width: 90%; /* Breedte van 90% van de container voor het tekstvak */
+    color: rgb(255, 255, 255); /* Tekstkleur wit */
+    position: absolute; /* Absolute positionering voor nauwkeurige plaatsing */
+    top: 50%; /* Verticaal uitlijnen in het midden */
+    left: 50%; /* Horizontaal uitlijnen in het midden */
+    transform: translate(-50%,-50%); /* Horizontale en verticale uitlijning in het midden */
+    text-align: center; /* Centreer de tekst in het tekstvak */
+}
+
+/* Stijlen voor de kop */
+.text-box-kliniek h1 
+{
+    font-size: 62px; /* Lettergrootte van 62 pixels voor de kop */
+}
+
+/* Stijlen voor tekst */
+.text-box-kliniek p 
+{
+    margin: 10px 0 40px; /* Buitenmarges aan de boven- en onderkant van 10px, ondermarge van 40px */
+    font-size: 20px; /* Tekstgrootte van 20 pixels voor de alinea's */
+    color: rgb(255, 255, 255); /* Tekstkleur wit */
+}
+
+/* Stijlen voor de knop "Locaties" */
+.locaties-btn 
+{
+    display: inline-block; /* In-line weergave voor knoppen */
+    text-decoration: none; /* Geen tekstdecoratie voor koppelingen */
+    color: white; /* Tekstkleur wit */
+    border: 1px solid white; /* 1px witte rand rond de knop */
+    padding: 12px 34px; /* Binnenste opvulling van 12px boven/onder en 34px links/rechts */
+    margin: 1%; /* Buitenmarges van 1% rond de knoppen */
+    font-size: 13px; /* Tekstgrootte van 13 pixels */
+    background: transparent; /* Transparante achtergrond voor knoppen */
+    position: relative; /* Stel de positionele context in op 'relatief' voor positionering */
+    cursor: pointer; /* Wijzig de cursor naar een handje om interactie aan te geven */
+}
+
+/* Stijlen voor de knop "Locaties" hover */
+.locaties-btn:hover 
+{
+    border: 1px solid #e68200; /* 1px oranje rand rond de knop bij hover */
+    background: #e68200; /* Oranje achtergrondkleur bij hover */
+    transition: 1s; /* Voeg een overgangseffect toe van 1 seconde */
+}
+
+/* Stijlen voor de sectie "Kliniek" */
+.kliniek 
+{
+    width: 80%; /* Breedte van 80% van de container */
+    margin: auto; /* Horizontaal centreren van de inhoud */
+    text-align: center; /* Centreer de tekst in de sectie */
+    padding-top: 20px; /* Bovenmarge van 20px */
+}
+
+/* Stijlen voor de kop in "Kliniek" */
+.kliniek h1 
+{
+    font-size: 30px; /* Lettergrootte van 30 pixels voor de kop */
+    font-weight: 600; /* Vetgedrukte tekst voor de kop */
+}
+
+/* Stijlen voor tekst in "Kliniek" */
+.kliniek p 
+{
+    color: 525050; /* Tekstkleur in hexadecimale notatie */
+    font-size: 16px; /* Tekstgrootte van 16 pixels */
+    font-weight: 300; /* Normale letterdikte */
+    line-height: 22px; /* Regelhoogte van 22 pixels */
+    padding: 10px; /* Binnenste opvulling van 10px rond de alinea's */
+}
+
+/* Stijlen voor "Welke Kliniek" */
+.welke-kliniek 
+{
+    background-color: #f2f2f2; /* Achtergrondkleur in hexadecimale notatie */
+    padding: 20px; /* Binnenste opvulling van 20px rond het element */
+    text-align: center; /* Centreer de tekst in het element */
+}
+
+.welke-kliniek h1 
+{
+    font-size: 24px; /* Lettergrootte van 24 pixels voor de kop */
+    color: #333; /* Tekstkleur in hexadecimale notatie */
+}
+
+.welke-kliniek p 
+{
+    font-size: 16px; /* Tekstgrootte van 16 pixels voor de alinea's */
+    color: #666; /* Tekstkleur in hexadecimale notatie */
+}
+
+/* Stijlen voor het invoerveld en knop */
+#locatieInput 
+{
+    padding: 10px; /* Binnenste opvulling van 10px voor het invoerveld */
+    border: 1px solid #ccc; /* 1px grijze rand rond het invoerveld */
+    border-radius: 5px; /* Afgeronde hoeken van 5px */
+    margin: 10px; /* Buitenmarge van 10px rond het invoerveld */
+}
+
+button 
+{
+    padding: 10px 20px; /* Binnenste opvulling van 10px boven/onder en 20px links/rechts voor de knop */
+    background-color: #e68200; /* Achtergrondkleur in hexadecimale notatie */
+    color: #fff; /* Tekstkleur wit */
+    border: none; /* Geen rand om de knop */
+    border-radius: 5px; /* Afgeronde hoeken van 5px voor de knop */
+    cursor: pointer; /* Wijzig de cursor naar een handje om interactie aan te geven */
+}
+
+button:hover 
+{
+    background-color: #ff9900; /* Oranje achtergrondkleur bij hover */
+}
+
+/* Stijlen voor het resultaat */
+#locatieResultaat 
+{
+    font-size: 18px; /* Tekstgrootte van 18 pixels voor het resultaat */
+    color: #e68200; /* Tekstkleur in hexadecimale notatie */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor "Onze Kliniek" sectie op kleinere schermen */
+    .header-kliniek 
+    {
+        min-height: 80vh; /* Aangepaste minimale hoogte voor betere weergave op kleinere schermen */
+        height: auto; /* Reset de vaste hoogte naar automatische hoogte */
+    }
+    .text-box-kliniek 
+    {
+        width: 100%; /* Volledige breedte voor het tekstvak op kleinere schermen */
+        left: 0; /* Linker uitlijning van het tekstvak */
+        transform: none; /* Reset de transformatie op kleinere schermen */
+    }
+    .text-box-kliniek h1 
+    {
+        font-size: 20px; /* Aangepaste lettergrootte voor de kop op kleinere schermen */
+    }
+    .text-box-kliniek p 
+    {
+        font-size: 15px; /* Aangepaste lettergrootte voor de alinea's op kleinere schermen */
+    }
+    .locaties-btn 
+    {
+        display: block; /* Verander naar blokweergave om knoppen te stapelen op kleinere schermen */
+        width: 80%; /* Aangepaste breedte van de knoppen op kleinere schermen */
+        margin: 10px auto; /* Centreer de knoppen en voeg ruimte toe tussen knoppen */
+    }
+    .kliniek 
+    {
+        width: 90%; /* Aangepaste breedte van de "Kliniek" sectie op kleinere schermen */
+    }
+    .kliniek h1 
+    {
+        font-size: 24px; /* Aangepaste lettergrootte voor de kop in "Kliniek" op kleinere schermen */
+    }
+    .kliniek p 
+    {
+        font-size: 14px; /* Aangepaste lettergrootte voor tekst in "Kliniek" op kleinere schermen */
+    }
+}
+
+/* Stijlen voor de sectie "Kliniek Amsterdam" */
+.wrapper-amsterdam-kliniek 
+{
+    justify-content: center; /* Centreer de inhoud horizontaal binnen de flexcontainer */
+}
+
+/* Stijlen voor de container in "Kliniek Amsterdam" */
+.container-amsterdam-kliniek 
+{
+    margin-top: 80px; /* Bovenmarge van 80px */
+    margin-left: 150px; /* Linkermarge van 150px */
+    margin-bottom: 300px; /* Ondermarge van 300px */
+    width: 80%; /* Breedte van 80% van de container */
+}
+
+/* Stijlen voor afbeeldingen in "Kliniek Amsterdam" */
+.image-amsterdam-kliniek img 
+{
+    width: 50%; /* Breedte van afbeeldingen is 50% van de container */
+    float: left; /* Laat afbeeldingen links uitlijnen en tekst ernaast plaatsen */
+    margin-right: 35px; /* Rechtermarge van 35px om tekst te scheiden */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe aan de afbeeldingen */
+}
+
+/* Stijlen voor bijschriften in "Kliniek Amsterdam" */
+.image-amsterdam-kliniek figcaption 
+{
+    font-size: 25px; /* Lettergrootte van bijschriften is 25px */
+}
+
+/* Stijlen voor tekst in "Kliniek Amsterdam" */
+.text-amsterdam-kliniek p 
+{
+    color: 525050; /* Tekstkleur in hexadecimale notatie */
+    font-size: 16px; /* Tekstgrootte van 16px */
+    font-weight: 300; /* Normale letterdikte */
+    line-height: 22px; /* Regelhoogte van 22px */
+    padding: 10px; /* Binnenste opvulling van 10px rond de alinea's */
+}
+
+/* Stijlen voor de sectie "Kliniek Den Bosch" */
+.wrapper-denbosch-kliniek 
+{
+    justify-content: center; /* Centreer de inhoud horizontaal binnen de flexcontainer */
+}
+
+/* Stijlen voor de container in "Kliniek Den Bosch" */
+.container-denbosch-kliniek 
+{
+    margin-top: 330px; /* Bovenmarge van 330px */
+    margin-left: 150px; /* Linkermarge van 150px */
+    margin-bottom: 250px; /* Ondermarge van 250px */
+    width: 90%; /* Breedte van 90% van de container */
+}
+
+/* Stijlen voor afbeeldingen in "Kliniek Den Bosch" */
+.image-denbosch-kliniek img 
+{
+    width: 45%; /* Breedte van afbeeldingen is 45% van de container */
+    float: right; /* Laat afbeeldingen rechts uitlijnen en tekst ernaast plaatsen */
+    margin-left: 35px; /* Linkermarge van 35px om tekst te scheiden */
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe aan de afbeeldingen */
+}
+
+/* Stijlen voor bijschriften in "Kliniek Den Bosch" */
+.image-denbosch-kliniek figcaption 
+{
+    font-size: 25px; /* Lettergrootte van bijschriften is 25px */
+    margin-left: 35%; /* Voeg een linkermarge toe voor positionering */
+}
+
+/* Stijlen voor tekst in "Kliniek Den Bosch" */
+.text-denbosch-kliniek p 
+{
+    color: 525050; /* Tekstkleur in hexadecimale notatie */
+    font-size: 15px; /* Tekstgrootte van 15px voor de alinea's */
+    font-weight: 300; /* Normale letterdikte */
+    line-height: 22px; /* Regelhoogte van 22px */
+    padding: 10px; /* Binnenste opvulling van 10px rond de alinea's */
+    padding-left: 200px; /* Linkermarge toevoegen voor positionering */
+}
+
+/* Stijlen voor de iframe-container in "Kliniek Den Bosch" */
+.iframe-container-denbosch 
+{
+    margin-left: 29%; /* Linkermarge toevoegen voor positionering van de iframe */
+}
+
+/* Stijlen voor de sectie "Kliniek Rotterdam" */
+.wrapper-rotterdam-kliniek 
+{
+    justify-content: center; /* Centreer de inhoud horizontaal binnen de flexcontainer */
+}
+
+/* Stijlen voor de container in "Kliniek Rotterdam" */
+.container-rotterdam-kliniek 
+{
+    margin-top: 80px; /* Bovenmarge van 80px */
+    margin-left: 150px; /* Linkermarge van 150px */
+    margin-bottom: 300px; /* Ondermarge van 300px */
+    width: 80%; /* Breedte van 80% van de container */
+}
+
+/* Stijlen voor afbeeldingen in "Kliniek Rotterdam" */
+.image-rotterdam-kliniek img 
+{
+    width: 50%; /* Breedte van afbeeldingen is 50% van de container */
+    float: left; /* Laat afbeeldingen links uitlijnen en tekst ernaast plaatsen */
+    margin-right: 35px; /* Rechtermarge van 35px om tekst te scheiden */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe aan de afbeeldingen */
+}
+
+/* Stijlen voor bijschriften in "Kliniek Rotterdam" */
+.image-rotterdam-kliniek figcaption 
+{
+    font-size: 25px; /* Lettergrootte van bijschriften is 25px */
+}
+
+/* Stijlen voor tekst in "Kliniek Rotterdam" */
+.text-rotterdam-kliniek p 
+{
+    color: 525050; /* Tekstkleur in hexadecimale notatie */
+    font-size: 16px; /* Tekstgrootte van 16px */
+    font-weight: 300; /* Normale letterdikte */
+    line-height: 22px; /* Regelhoogte van 22px */
+    padding: 10px; /* Binnenste opvulling van 10px rond de alinea's */
+}
+
+/* Scrollgedrag voor de gehele HTML-pagina */
+html 
+{
+    scroll-behavior: smooth; /* Voeg soepel scrollgedrag toe aan de hele HTML-pagina */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor sectie "Onze Kliniek" op kleinere schermen */
+    .header-kliniek 
+    {
+        min-height: 80vh; /* Reset min-height voor betere weergave op kleinere schermen */
+        height: auto; /* Reset height naar automatische hoogte */
+    }
+    .text-box-kliniek 
+    {
+        width: 100%; /* Volledige breedte voor tekstvak op kleinere schermen */
+        left: 0; /* Linker uitlijning van het tekstvak */
+        transform: none; /* Reset de transformatie op kleinere schermen */
+    }
+    .text-box-kliniek h1 
+    {
+        font-size: 20px; /* Aanpassen van lettergrootte voor de kop op kleinere schermen */
+    }
+    .text-box-kliniek p 
+    {
+        font-size: 15px; /* Aanpassen van lettergrootte voor de alinea's op kleinere schermen */
+    }
+    .locaties-btn 
+    {
+        display: block; /* Verander naar blokweergave om knoppen te stapelen op kleinere schermen */
+        width: 80%; /* Aanpassen van breedte van de knoppen op kleinere schermen */
+        margin: 10px auto; /* Centreer de knoppen en voeg ruimte toe tussen knoppen */
+    }
+    .kliniek 
+    {
+        width: 90%; /* Aanpassen van breedte van de "Kliniek" sectie op kleinere schermen */
+    }
+    .kliniek h1 
+    {
+        font-size: 24px; /* Aanpassen van lettergrootte voor de kop in "Kliniek" op kleinere schermen */
+    }
+    .kliniek p 
+    {
+        font-size: 14px; /* Aanpassen van lettergrootte voor tekst in "Kliniek" op kleinere schermen */
+    }
+    /* Aanpassingen voor elk locatiegedeelte zoals nodig */
+    .wrapper-amsterdam-kliniek,
+    .wrapper-denbosch-kliniek,
+    .wrapper-rotterdam-kliniek 
+    {
+        margin-top: 20px; /* Aanpassen van margin-top voor ruimte */
+    }
+    .container-amsterdam-kliniek,
+    .container-denbosch-kliniek,
+    .container-rotterdam-kliniek 
+    {
+        margin: 20px auto; /* Centreren en aanpassen van margin */
+    }
+    .image-amsterdam-kliniek img,
+    .image-denbosch-kliniek img,
+    .image-rotterdam-kliniek img 
+    {
+        width: 100%; /* Aanpassen van afbeeldingsbreedte */
+        float: none; /* Verwijder float */
+        margin: 0; /* Reset margin */
+        box-shadow: none; /* Verwijder box-shadow */
+    }
+    .image-amsterdam-kliniek figcaption,
+    .image-rotterdam-kliniek figcaption 
+    {
+        font-size: 20px; /* Aanpassen van lettergrootte */
+    }
+    .text-amsterdam-kliniek p,
+    .text-denbosch-kliniek p,
+    .text-rotterdam-kliniek p 
+    {
+        font-size: 14px; /* Aanpassen van lettergrootte */
+        padding: 10px 0; /* Aanpassen van padding */
+        text-align: center; /* Tekst centreren */
+    }
+    .image-denbosch-kliniek figcaption 
+    {
+        font-size: 20px; /* Aanpassen van lettergrootte */
+        margin-left: -2px; /* Aanpassen van margin-left voor ruimte */
+    }
+    /* Stijlen voor iframe-container */
+    .iframe-container iframe 
+    {
+        width: 100%; /* Maak de iframe volledige breedte binnen de container */
+        height: auto; /* Laat de hoogte automatisch aanpassen */
+    }
+    .iframe-container-denbosch iframe 
+    {
+        width: 100%; /* Maak de iframe volledige breedte binnen de container */
+        margin-left: -20%; /* Aanpassen van margin-left voor ruimte */
+    }
+}
+
+/* Stijlen voor de sectie "Social Media" */
+.social-media 
+{
+    min-width: 100vh; /* Minimale breedte van 100% van de viewporthoogte */
+    width: 100%; /* Breedte van 100% van de container */
+    text-align: center; /* Centreer de tekst in de sectie */
+    padding: 30px 0; /* Boven- en ondermarge van 30px, geen zijmarges */
+    background-color: rgb(126, 126, 126); /* Achtergrondkleur in RGB-notatie */
+}
+
+/* Stijlen voor de kop in "Social Media" */
+.social-media h4 
+{
+    margin-bottom: 20px; /* Ondermarge van 20px onder de kop */
+    margin-top: 20px; /* Bovenmarge van 20px boven de kop */
+    font-weight: 600px; /* Letterdikte van 600 (extra vet) */
+    color: #fff; /* Tekstkleur wit */
+}
+
+/* Stijlen voor tekst in "Social Media" */
+.social-media p 
+{
+    color: #fff; /* Tekstkleur wit */
+}
+
+/* Stijlen voor social media pictogrammen */
+.icons 
+{
+    margin: 0px 13px; /* Boven- en ondermarge van 0px, 13px zijmarge */
+    cursor: pointer; /* Wijzig de cursor naar een handje om interactie aan te geven */
+    padding: 18px; /* Binnenste opvulling van 18px rond de pictogrammen */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor "Social Media" sectie op kleinere schermen */
+    .social-media 
+    {
+        min-width: 40vh; /* Minimale breedte van 40% van de viewporthoogte */
+        width: 100%; /* Breedte van 100% van de container */
+    }
+    .social-media h4 
+    {
+        margin-bottom: 25px; /* Ondermarge van 25px onder de kop */
+        margin-top: 20px; /* Bovenmarge van 20px boven de kop */
+        font-weight: 600px; /* Letterdikte van 600 (extra vet) */
+    }
+}

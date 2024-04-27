@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Auteur:   Kamil Kala       
+Aanmaakdatum:  22-01-2024
+
+-->
+<html>
+    <head>
+      <title>
+        Kamil Kala
+      </title>
+        <!-- Documenttype en taalinstelling -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Porftolio Website - Kamil Kala">
+        <link id="stylesheet" href="../styles/dark-theme.css" rel="stylesheet">
+        <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+        <script src="scripts/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+        <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+        <script src="../javascript/javascript.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <!-- Logo en navigatiemenu voor mobiel -->
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+              <!-- Navigatiemenu-items -->
+              <li><a href="../index.html">Startpagina</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./hobby's.html">Hobby’s</a></li>
+              <li><a href="./resultaten.html">Resultaten</a></li>
+              <li><a href="./ervaringen.html">Ervaringen</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+      </header>
+      <main class="projects">
+        <h1>Mijn <span class="color-yellow">Projecten</span></h1>
+        
+        <!-- Eerste rij afbeeldingen -->
+        <div class="image-container">
+          <div class="image-box">
+            <img src="../images/AnimalClinic.png" alt="Animal Clinic">
+            <a href="../AnimalClinic/index.html"  target="_blank"><p class="image-description">Animal Clinic<br><span class="portfolio-text">Bij deze oefening heb ik veel geleerd over HTML, CSS en JavaScript. Ik kan nu gestructureerde webpagina's maken, de lay-out beheren en interactieve elementen toevoegen. Dit heeft mijn vaardigheden in webontwikkeling aanzienlijk verbeterd.</span></p></a>
+          </div>
+          
+          <!-- Tweede rij afbeeldingen -->
+          <div class="image-box">
+            <img src="../images/NikeStore.png" alt="Nike Website">
+            <a href="../aNikeStore/index.html"  target="_blank"><p class="image-description">Nike Store<br><span class="portfolio-text">Ik heb mijn webontwikkelingsvaardigheden aanzienlijk verbeterd door te leren werken met HTML, CSS en JavaScript. Nu kan ik gestructureerde webpagina's maken, de lay-out beheren en interactieve elementen toevoegen.</span></p></a>
+          </div>
+        </div>
+
+        <!-- Derde rij afbeeldingen -->
+        <div class="image-container">
+          <div class="image-box">
+            <img src="../images/Opdrachtvoor page.png" alt="Opdracht 1">
+            <a href="../AOpdracht/index.html"  target="_blank"><p class="image-description">Tabel<br><span class="portfolio-text">Bij deze oefening heb ik geleerd hoe ik tabellen in html en css kan maken</span></p></a>
+          </div>
+
+          <!-- Vierde rij afbeeldingen -->
+          <div class="image-box">
+            <img src="../images/Opdracht2.png" alt="Nike Website">
+            <a href="../Aopdracht1.1/index.html"  target="_blank"><p class="image-description">Positions<br><span class="portfolio-text">Bij deze oefening heb ik geleerd hoe kan ik verschillende elementen uitlijnen en positioneren</span></p></a>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div id="javascriptcopyright">&copy; Kamil K.R Kala kamil.kala-edu@kw1c.nl<i class="fa-solid fa-rocket" style="color: #ffffff;"></i></div>
+      </footer>
+</body>
+</html>

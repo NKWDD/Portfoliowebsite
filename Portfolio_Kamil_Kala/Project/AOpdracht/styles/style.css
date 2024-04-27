@@ -1,0 +1,56 @@
+/*
+    Auteur:             << Kamil Kala >>
+    Aanmaakdatum:       << 27-11-2023 >>
+    
+    Oefening 2.1 
+*/
+
+table, td
+{
+  border: 2px solid black; /*Maak een zwarte rand rond table*/
+  border-collapse: collapse; /*Randen in de tabel*/
+  text-align: center; /*text centreren*/
+}
+
+#festival-programma
+{
+  color: white; /*witte kleur van text Festival programma*/
+  background-color: black; /*achtergrond kleur zwart*/
+  height: 65px; /*Hooghte 65px*/
+  font-size: 35px; /*Grote van lettertype*/
+  font-weight: 900; /*dikte van lettertype*/
+}
+
+#zaterdag
+{
+  color: white; /*witte kleur van text Zaterdag*/
+  background-color: gray; /*achtergrond kleur grijs*/
+  height: 65px; /*Hooghte 65px*/
+  font-size: 30px; /*Grote van lettertype*/
+  font-weight: 900; /*dikte van lettertype*/
+}
+
+#begin-eind
+{
+  color: white; /*witte kleur van text*/
+  background-color: #0a3251; /*achtergrond kleur*/
+  font-weight: 900; /*dikkte van lettertype*/
+}
+
+#tijd
+{
+  color: white; /*witte kleur van text*/
+  background-color: #0a3251 /*achtergrond kleur*/
+}
+
+#geen-optreden
+{
+  background-color: #97172c; /*achtergrond kleur*/
+  color: white; /*witte kleur van text*/
+}
+
+#mystery-artist
+{
+  background-color: #c39549; /*achtergrond kleur*/
+  color: white; /*witte kleur van text*/
+}

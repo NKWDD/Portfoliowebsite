@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Auteur: Kamil Kala
+Aanmaakdatum: 22-01-2024
+-->
+
+<html>
+    <head>
+      <title>Kamil Kala - Portfolio</title>
+        <!-- Documenttype en taalinstelling -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio Website - Kamil Kala">
+        <link id="stylesheet" href="../styles/dark-theme.css" rel="stylesheet">
+        <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+        <script src="scripts/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+        <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+        <script src="../javascript/javascript.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <!-- Logo en navigatiemenu voor mobiel -->
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+              <!-- Navigatiemenu-items -->
+              <li><a href="../index.html">Startpagina</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./hobby's.html">Hobby’s</a></li>
+              <li><a href="./resultaten.html">Resultaten</a></li>
+              <li><a href="./ervaringen.html">Ervaringen</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+      </header>
+      <nav class="hobby-nav">
+        <ul>
+            <li class="hobby-li"><a href="#hobby1">Sportschool</a></li>
+            <li class="hobby-li"><a href="#hobby2">Basketbal</a></li>
+            <li class="hobby-li"><a href="#hobby3">Piano</a></li>
+            <!-- Voeg extra hobby's toe indien gewenst -->
+        </ul>
+    </nav>
+    
+        <main class="hobby">
+        <h1>Hobby'<span class="color-yellow">s</span></h1>
+      <p>
+        Mijn passie ligt voornamelijk bij de sportschool, waar ik regelmatig te vinden ben om mijn lichaam sterker en gezonder te maken. Gewichtstraining is mijn favoriete bezigheid, en ik geniet van de uitdaging om mijn fysieke grenzen te verleggen.<br>
+        <br>
+        Naast de sportschool heb ik ook een zwak voor basketbal, een sport die ik maar liefst 8 jaar heb gespeeld in mijn verleden. Hoewel ik het niet meer op competitief niveau beoefen, vind ik het nog steeds heerlijk om af en toe een potje te spelen en de herinneringen aan mijn basketbaljaren levend te houden.<br>
+        <br>
+        Een andere hobby waar ik graag mijn tijd aan zou besteden als ik de kans krijg, is piano spelen. De klanken van de piano fascineren me, maar tot nu toe heb ik niet de gelegenheid gehad om dit instrument te leren bespelen. Desondanks blijft het een activiteit die me aanspreekt, en wie weet zal ik in de toekomst de tijd vinden om mijn interesse in piano verder te verkennen. Mijn leven draait om de balans tussen fysieke kracht, sportieve herinneringen en de droom om ooit de melodieën van de piano te kunnen laten klinken.
+      </p>
+    <section class="hobby-section" id="hobby1">
+        <h2>Hobby 1: Sportschool</h2>
+        <p> Mijn passie ligt voornamelijk bij de sportschool, waar ik regelmatig te vinden ben om mijn lichaam sterker en gezonder te maken. Gewichtstraining is mijn favoriete bezigheid, en ik geniet van de uitdaging om mijn fysieke grenzen te verleggen.</p>
+    </section>
+    
+    <section class="hobby-section" id="hobby2">
+        <h2>Hobby 2: Basketbal</h2>
+        <p>Naast de sportschool heb ik ook een zwak voor basketbal, een sport die ik maar liefst 8 jaar heb gespeeld in mijn verleden. Hoewel ik het niet meer op competitief niveau beoefen, vind ik het nog steeds heerlijk om af en toe een potje te spelen en de herinneringen aan mijn basketbaljaren levend te houden.</p>
+    </section>
+    
+    <section class="hobby-section" id="hobby3">
+        <h2>Hobby 3: Piano</h2>
+        <p>Een andere hobby waar ik graag mijn tijd aan zou besteden als ik de kans krijg, is piano spelen. De klanken van de piano fascineren me, maar tot nu toe heb ik niet de gelegenheid gehad om dit instrument te leren bespelen. Desondanks blijft het een activiteit die me aanspreekt, en wie weet zal ik in de toekomst de tijd vinden om mijn interesse in piano verder te verkennen. Mijn leven draait om de balans tussen fysieke kracht, sportieve herinneringen en de droom om ooit de melodieën van de piano te kunnen laten klinken.</p>
+    </section>
+
+    <footer>
+      <div id="javascriptcopyright">&copy; Kamil K.R Kala kamil.kala-edu@kw1c.nl<i class="fa-solid fa-rocket" style="color: #ffffff;"></i></div>
+    </footer>
+  </main>
+</body>
+</html>

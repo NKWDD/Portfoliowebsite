@@ -1,0 +1,1120 @@
+/* Auteur:      Kamil Kala    
+Aanmaakdatum:  22-1-2024
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@700&family=Open+Sans:wght@700&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+ @keyframes moveAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(25px); }
+  100% { transform: translateY(0); }
+ }
+
+/* Algemene opmaak voor de body van de pagina */
+body {
+  background-color: rgb(181, 181, 181); /* Achtergrondkleur van de pagina */
+  margin: 0; /* Verwijder standaard marges om de body te vullen */
+}
+
+/* Opmaak voor de headersectie */
+.header {
+    min-height: 100vh; /* Minimale hoogte van 100% van het scherm. */
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+/* Stijlen voor het gebruik van solid-icons in FontAwesome */
+.fa-solid {
+  margin: 10px;
+}
+
+/* Klasse voor het instellen van tekstkleur op geel */
+.color-yellow {
+  color: rgb(254, 196, 112);
+}
+
+/* Opmaak voor de navigatiebalk */
+nav {
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: right;
+}
+
+/* Stijlen om het menu te tonen wanneer het actief is */
+.nav-links.active {
+  right: 0px; /* Verschuif het menu naar rechts om het te tonen wanneer actief. */
+}
+
+/* Stijlen om het menu te verbergen wanneer het niet actief is */
+.nav-links {
+  right: -200px; /* Verschuif het menu naar links om het te verbergen wanneer niet actief. */
+  transition: right 0.3s; /* Voeg een soepele overgang toe aan het verbergen en tonen van het menu. */
+}
+
+/* Opmaak voor de navigatielinks */
+.nav-links {
+    flex: 1; /* Flexibele indeling om zich aan te passen aan de beschikbare ruimte. */
+    text-align: right; /* Tekst wordt aan de rechterkant van het scherm uitgelijnd. */
+}
+
+/* Opmaak voor de lijstitems in de navigatielinks */
+.nav-links ul li {
+    list-style: none; /* Verwijder de standaard lijststijl. */
+    display: inline-block; /* Lijstitems worden naast elkaar weergegeven. */
+    padding: 8px 10px; /* Binnenmarges van de lijstitems. */
+    position: relative; /* De positie is relatief voor positionele aanpassingen. */
+    top: -30px; /* Verplaats lijstitems naar boven om de gewenste uitlijning te bereiken. */
+}
+
+/* Opmaak voor de ankertags in de navigatielinks */
+.nav-links ul li a {
+    color: #fff; /* Tekstkleur van de ankertags. */
+    text-decoration: none; /* Verwijder de onderstreping van ankertags. */
+    font-size: 18px; /* Lettergrootte van de ankertags. */
+    font-family: 'Roboto', sans-serif; /* Lettertype voor de ankertags */
+    font-family: 'Roboto Condensed', sans-serif; /* Aanvullend lettertype voor de ankertags */
+    font-weight: 100; /* Aanpassing van de tekstdikte indien nodig */
+}
+
+/* Stijlen voor het onderstrepen van de lijstitems bij hover */
+.nav-links ul li::after {
+    content: ''; /* Pseudo-element voor het creëren van onderstreping. */
+    width: 0px; /* Beginbreedte van de onderstreping. */
+    height: 2px; /* Hoogte van de onderstreping. */
+    background: rgb(254, 196, 112); /* Kleur van de onderstreping. */
+    display: block; /* Laat het pseudo-element als een blok zien. */
+    margin: auto; /* Centreer het pseudo-element horizontaal. */
+    transition: 0.5s; /* Voeg een overgang toe voor het uitbreiden van de onderstreping. */
+}
+
+/* Stijlen voor het uitbreiden van de onderstreping bij hover */
+.nav-links ul li:hover::after {
+    width: 100%; /* Breid de onderstreping uit tot de volledige breedte bij hover. */
+}
+
+/* Verberg het menu-icoon op grotere schermen */
+nav .fa {
+    display: none; /* Het menu-icoon is standaard verborgen op grotere schermen. */
+}
+
+/* Opmaak voor de container van de pagina-inhoud */
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Kind-elementen links uitlijnen */
+  padding: 5px; /* Voeg padding toe voor ruimte */
+}
+
+/* Algemene stijlen voor elementen binnen #kamilkala */
+#kamilkala h1 + h3 {
+  color: rgb(254, 196, 112); /* Tekstkleur voor h3 na h1 binnen #kamilkala */
+}
+
+#kamilkala {
+  /* Marges en kleurinstellingen voor #kamilkala */
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 250px;
+  color: rgb(0, 0, 0);
+}
+
+#kamilkala h1 {
+  /* Stijlen voor h1 binnen #kamilkala */
+  font-size: 96px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; /* Aanpassing van de tekstdikte indien nodig */
+  margin-bottom: 15px;
+}
+
+#kamilkala h3 {
+  /* Stijlen voor h3 binnen #kamilkala */
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif; /* Aanvullend lettertype voor h3 */
+  font-weight: 100; /* Aanpassing van de tekstdikte indien nodig */
+  font-style: initial;
+  margin-bottom: -25px;
+}
+
+/* Stijlen voor het logo binnen .logo-klasse */
+.logo {
+  /* Stijlen voor het logo */
+  width: 600px;
+  height: 600px;
+  background-image: url('../images/Astronaut.png');
+  background-size: cover;
+  margin-bottom: 250px;
+  top: 0;
+  left: 0;
+  animation: moveAnimation 5s infinite; /* Duur van de animatie aanpassen indien nodig */
+}
+
+/* Standaardstijlen voor het logo binnen .logo1-klasse */
+.logo1 img {
+  /* Stijlen voor het logo binnen .logo1 */
+  display: block;
+  margin: auto;
+  background-size: cover;
+  margin-bottom: 250px;
+  top: 0;
+  left: 0;
+  animation: moveAnimation 5s infinite; /* Duur van de animatie aanpassen indien nodig */
+}
+
+/* Standaardstijlen voor het logo binnen .logo1-klasse */
+.logo1 img {
+  /* Stijlen voor het logo binnen .logo1 */
+  display: block; /* Zet de afbeelding als een blokelement */
+  margin: auto; /* Centreer de afbeelding */
+  background-size: cover; /* Zorg ervoor dat de achtergrondafbeelding de hele div bedekt */
+  margin-bottom: 250px; /* Voeg marge toe voor betere ruimte */
+  top: 0; /* Plaats het bovenaan */
+  left: 0; /* Plaats het links */
+  animation: moveAnimation 5s infinite; /* Duur van de animatie aanpassen indien nodig */
+}
+
+/* Mediaquery voor schermen met een minimumbreedte van 1080 pixels (grotere schermen) */
+@media screen and (min-width: 1080px) {
+  .logo1 img {
+    display: none !important; /* Gebruik !important om hogere specificiteit te garanderen */
+  }
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media (orientation: portrait) {
+    /* Aanpassingen voor kopgrootte en navigatielinks op kleinere schermen */
+    .header {
+        min-height: 950px; /* Verwijder de minimale hoogte voor flexibiliteit en pas de hoogte aan voor kleinere schermen. */
+        width: 100%; /* Breedte instellen op 100% van de oudercontainer */
+    }
+
+    .text-box h1 {
+        font-size: 20px; /* Kopgrootte verkleinen naar 20 pixels op kleinere schermen */
+    }
+
+    .nav-links ul li {
+        display: block; /* Lijstitems weergeven als blokken op kleinere schermen */
+    }
+
+    .nav-links {
+        /* Aanpassingen voor navigatielinks op kleinere schermen */
+        position: absolute;
+        background: rgb(254, 196, 112);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    /* Toon het menu-icoon op kleinere schermen */
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+
+    /* Aanpassingen voor de content-container op kleinere schermen */
+    .content-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+
+    #kamilkala {
+      margin: 5px 25px 50px; /* Marge aanpassen voor betere ruimte op kleinere schermen */
+    }
+
+    #kamilkala h1 {
+      font-size: 24px; /* Kopgrootte aanpassen voor kleinere schermen */
+      margin-bottom: 5px;
+    }
+
+    #kamilkala h3 {
+      font-size: 14px; /* Kopgrootte aanpassen voor kleinere schermen */
+      margin-bottom: -10px;
+    }
+
+    .logo {
+      width: 80%; /* Maak het logo de breedte van de container op kleinere schermen */
+      max-width: 300px; /* Stel een maximale breedte in voor het logo */
+      height: auto; /* Behoud de beeldverhouding */
+      margin-bottom: 30px; /* Marge aanpassen voor betere ruimte op kleinere schermen */
+      background-image: none; /* Verwijder de achtergrondafbeelding op kleinere schermen */
+    }
+
+    .logo1 img {
+      width: 100%; /* Maak de afbeelding de breedte van de container */
+      height: auto; /* Behoud de beeldverhouding */
+      max-width: 300px; /* Stel een maximale breedte in voor het logo */
+      margin-bottom: 30px; /* Marge aanpassen voor betere ruimte op kleinere schermen */
+      background-image: none; /* Verwijder de achtergrondafbeelding op kleinere schermen */
+      margin-left: 100px; /* Marge aanpassen voor betere uitlijning */
+      margin-bottom: -150px; /* Marge aanpassen voor betere ruimte */
+    }
+
+    /* Aanpassingen voor de footer op kleinere schermen */
+    footer {
+      margin-top: 90px;
+    }
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px en een landschapsoriëntatie */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  /* Aanpassingen voor kopgrootte en navigatielinks op kleinere schermen */
+  .header {
+      min-height: 950px; /* Verwijder de minimale hoogte voor flexibiliteit en pas de hoogte aan voor kleinere schermen. */
+      width: 100%; /* De breedte wordt ingesteld op 100% van de oudercontainer. */
+  }
+
+  .text-box h1 {
+      font-size: 20px; /* De lettergrootte van de kop wordt verkleind naar 20 pixels op kleinere schermen. */
+  }
+
+  .nav-links ul li {
+      display: block; /* De lijstitems worden weergegeven als blokken op kleinere schermen. */
+  }
+
+  .nav-links {
+      /* Aanpassingen voor navigatielinks op kleinere schermen */
+      position: absolute;
+      background: rgb(254, 196, 112);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+
+  /* Toon het menu-icoon op kleinere schermen */
+  nav .fa {
+      display: block;
+      color: white;
+      margin: 10px;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+  .nav-links ul {
+      padding: 30px; /* Binnenmarges worden toegevoegd aan de lijstitems. */
+  }
+
+  /* Aanpassingen voor de content-container op kleinere schermen */
+  .content-container {
+    flex-direction: column; /* Verander naar een kolomindeling op kleinere schermen */
+    align-items: flex-start; /* Elementen aan de linkerkant uitlijnen */
+    padding: 15px; /* Padding vergroten voor betere ruimte op kleinere schermen */
+  }
+
+  #kamilkala {
+    margin: -60px 50px 50px; /* Marge aanpassen voor betere ruimte op kleinere schermen */
+  }
+
+  #kamilkala h1 {
+    font-size: 48px; /* Lettergrootte aanpassen voor kleinere schermen */
+    margin-bottom: 5px; /* Marge aanpassen voor betere ruimte */
+  }
+
+  #kamilkala h3 {
+    font-size: 21px; /* Lettergrootte aanpassen voor kleinere schermen */
+    margin-bottom: -23px; /* Marge aanpassen voor betere ruimte */
+  }
+
+  .logo {
+    width: 80%; /* Laat het logo de breedte van de container vullen op kleinere schermen */
+    max-width: 300px; /* Stel een maximale breedte in voor het logo */
+    height: auto; /* Behoud de beeldverhouding */
+    margin-bottom: 30px; /* Marge aanpassen voor betere ruimte op kleinere schermen */
+    background-image: none; /* Verwijder de achtergrondafbeelding op kleinere schermen */
+  }
+
+  .logo1 img {
+    width: 100%; /* Laat de afbeelding de breedte van de container vullen */
+    height: auto; /* Behoud de beeldverhouding */
+    max-width: 400px; /* Stel een maximale breedte in voor het logo */
+    margin-bottom: 30px; /* Marge aanpassen voor betere ruimte op kleinere schermen */
+    background-image: none; /* Verwijder de achtergrondafbeelding op kleinere schermen */
+    margin-left: 400px; /* Marge aanpassen voor betere uitlijning */
+    margin-bottom: -250px; /* Marge aanpassen voor betere ruimte */
+  }
+}
+
+/* Kort over mij */
+
+/* Opmaak voor de profielfoto */
+.me-pic {
+  flex: 0 0 500px; /* Flexibele grootte van 500 pixels breed, niet flexibel in hoogte */
+  height: 500px; /* Vaste hoogte van 500 pixels */
+  background-image: url('../images/photo.jpg'); /* Achtergrondafbeelding voor de profielfoto */
+  background-size: cover; /* Zorg ervoor dat de achtergrondafbeelding het volledige element bedekt */
+  margin-left: 25px; /* Voeg wat ruimte toe tussen de afbeelding en de tekst */
+  margin-top: 75px; /* Voeg wat ruimte toe aan de bovenkant van de afbeelding */
+  border: 2px solid rgb(254, 196, 112); /* Rand met een kleur van rgb(254, 196, 112) */
+}
+
+/* Eerste-letter selector voor de kop */
+.kort-over-mij-text h2::first-letter {
+  font-size: 150%; /* Vergroot de eerste letter met 150% */
+  font-weight: bold; /* Maak de eerste letter vet */
+  font-style: italic; /* Maak de eerste letter cursief */
+  text-decoration: underline; /* Onderstreep de eerste letter */
+  color: rgb(254, 196, 112); /* Wijzig de kleur van de eerste letter naar rgb(254, 196, 112) */
+}
+
+/* Opmaak voor het tekstgedeelte */
+.kort-over-mij {
+  background-color: rgb(151, 150, 150); /* Achtergrondkleur voor het tekstgedeelte */
+  padding-bottom: 25px; /* Ondermarge voor het tekstgedeelte */
+  text-align: left; /* Tekstuitlijning op links */
+  padding-top: 15px; /* Bovenmarge voor het tekstgedeelte */
+  font-family: 'Roboto', sans-serif; /* Lettertype */
+  color: #fff; /* Tekstkleur wit */
+}
+
+/* Opmaak voor het tekst- en afbeeldingsgedeelte */
+.kort-over-mij-text figure {
+  padding-top: 15px; /* Bovenmarge voor het tekst- en afbeeldingsgedeelte */
+  display: flex; /* Gebruik een flexbox-indeling voor het tekst- en afbeeldingsgedeelte */
+  flex-direction: row-reverse; /* Plaats de afbeelding aan de rechterkant */
+  margin-right: 50px; /* Buitenmarge aan de rechterkant van de afbeelding */
+}
+
+/* Opmaak voor het bijschrift */
+figcaption {
+  flex: 1; /* Laat het bijschrift flexibel groeien */
+}
+
+/* Opmaak voor de kop in het bijschrift */
+figcaption h2 {
+  font-size: 42px; /* Lettergrootte van de kop in het bijschrift */
+  font-weight: 900; /* Vetgedrukte stijl voor de kop in het bijschrift */
+  margin-bottom: 15px; /* Ondermarge voor de kop in het bijschrift */
+}
+
+/* Opmaak voor de alinea in het bijschrift */
+figcaption p {
+  font-size: 20px; /* Lettergrootte van de alinea in het bijschrift */
+  margin-bottom: 15px; /* Ondermarge voor de alinea in het bijschrift */
+  font-weight: 100; /* Normaal lettertype voor de alinea in het bijschrift */
+}
+
+/* Default styling voor het logo */
+.logo2 img {
+  display: block; /* Laat de afbeelding als een blokelement weergeven */
+  margin: auto; /* Centreer de afbeelding */
+  background-size: cover; /* Zorg ervoor dat de achtergrondafbeelding het volledige element bedekt */
+}
+
+/* Mediaquery voor schermen met een minimum breedte van 769 pixels (grotere schermen) */
+@media screen and (min-width: 769px) {
+  .logo2 {
+    display: none; /* Verberg het logo op grotere schermen */
+  }
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 720 pixels (kleinere schermen) */
+@media only screen and (max-width: 720px) {
+  .me-pic {
+    flex: 0 0 100%; /* Maak de afbeelding zo breed als het beschikbare scherm */
+    height: auto; /* Behoud de beeldverhouding */
+    background-image: none; /* Verwijder de achtergrondafbeelding op kleinere schermen */
+    margin-left: 0; /* Verwijder de linkermarge op kleinere schermen */
+    margin-top: 0; /* Verwijder de bovenmarge op kleinere schermen */
+    border: none; /* Verwijder de rand op kleinere schermen */
+  }
+
+  .kort-over-mij-text figure {
+    flex-direction: column; /* Verander de indeling naar een kolom op kleinere schermen */
+    margin-right: 0; /* Verwijder de rechtermarge op kleinere schermen */
+  }
+
+  figcaption h2 {
+    font-size: 20px; /* Pas de lettergrootte aan voor kleinere schermen */
+    margin-bottom: 10px; /* Pas de ondermarge aan voor betere ruimte */
+  }
+
+  figcaption p {
+    font-size: 14px; /* Pas de lettergrootte aan voor kleinere schermen */
+    margin-bottom: 10px; /* Pas de ondermarge aan voor betere ruimte */
+  }
+
+  .contact article h2,
+  .contact article p {
+    margin-left: 0; /* Verwijder de linkermarge op kleinere schermen */
+    margin-right: 0; /* Verwijder de rechtermarge op kleinere schermen */
+  }
+
+  .logo2 {
+    width: 75%; /* Laat de afbeelding de breedte van de container vullen op kleinere schermen */
+    height: auto; /* Behoud de beeldverhouding */
+    max-width: 300px; /* Stel een maximale breedte in voor het logo */
+    margin-bottom: 30px; /* Pas de marge aan voor betere ruimte op kleinere schermen */
+    background-image: none; /* Verwijder de achtergrondafbeelding op kleinere schermen */
+    margin-left: 35px; /* Pas de marge aan voor betere uitlijning op kleinere schermen */
+    margin-bottom: -5px; /* Pas de ondermarge aan voor betere ruimte op kleinere schermen */
+    border: 2px solid rgb(254, 196, 112); /* Rand met een kleur van rgb(254, 196, 112) op kleinere schermen */
+  }
+}
+
+/* Mediaquery voor schermen met een maximale hoogte van 575.98 pixels en een landschapsoriëntatie */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .flex-container {
+    display: flex; /* Gebruik een flexbox-indeling voor de container */
+    flex-direction: column; /* Stapel items verticaal op in de container */
+    align-items: center; /* Centreer items horizontaal in de container */
+  }
+
+  .me-pic {
+    height: 450px; /* Vaste hoogte van 450 pixels voor de profielfoto */
+    background-size: cover; /* Zorg ervoor dat de achtergrondafbeelding het volledige element bedekt */
+    margin-left: 25px; /* Voeg wat ruimte toe tussen de afbeelding en de tekst */
+    margin-top: 75px; /* Voeg wat ruimte toe aan de bovenkant van de afbeelding */
+    border: 2px solid rgb(254, 196, 112); /* Rand met een kleur van rgb(254, 196, 112) */
+  }
+
+  figcaption h2 {
+    font-size: 32px; /* Lettergrootte van de kop in het bijschrift op kleinere schermen */
+    font-weight: 900; /* Vetgedrukte stijl voor de kop in het bijschrift op kleinere schermen */
+    margin-bottom: 15px; /* Ondermarge voor de kop in het bijschrift op kleinere schermen */
+  }
+
+  figcaption p {
+    font-size: 12px; /* Lettergrootte van de alinea in het bijschrift op kleinere schermen */
+    margin-bottom: 15px; /* Ondermarge voor de alinea in het bijschrift op kleinere schermen */
+    font-weight: 100; /* Normaal lettertype voor de alinea in het bijschrift op kleinere schermen */
+  }
+}
+
+
+/* Contact */
+
+/* Opmaak voor het contactgedeelte */
+.contact {
+  padding-bottom: 25px; /* Ondermarge voor het contactgedeelte */
+  text-align: left; /* Tekstuitlijning op links */
+  padding-top: 15px; /* Bovenmarge voor het contactgedeelte */
+  font-family: 'Roboto', sans-serif; /* Lettertype */
+  color: #fff; /* Tekstkleur wit */
+}
+
+/* Klasse voor het toepassen van gele tekstkleur */
+.color-yellow {
+  color: rgb(254, 196, 112); /* Tekstkleur van rgb(254, 196, 112) */
+}
+
+/* Opmaak voor koppen binnen een artikel in het contactgedeelte */
+article h2 {
+  margin-left: 35px; /* Linkermarge voor koppen in artikelen */
+  font-size: 42px; /* Lettergrootte van koppen in artikelen */
+}
+
+/* Opmaak voor alinea's binnen een artikel in het contactgedeelte */
+article p {
+  margin-left: 35px; /* Linkermarge voor alinea's in artikelen */
+  font-size: 20px; /* Lettergrootte van alinea's in artikelen */
+  margin-bottom: 15px; /* Ondermarge voor alinea's in artikelen */
+  font-weight: 100; /* Normaal lettertype voor alinea's in artikelen */
+  margin-right: 700px; /* Rechtermarge voor alinea's in artikelen */
+}
+
+/* Stijlen voor tekstvak */
+.text-box-afspraak hr 
+{
+    display: none; /* Hiermee wordt de <hr> niet zichtbaar */
+}
+
+/* Stijlen voor de container */
+.container 
+{
+    width: 100%; /* Breedte van 100% van de container */
+    height: 100vh; /* Hoogte van 100% van de viewporthoogte */
+    display: flex; /* Weergave als een flex-container om inhoud uit te lijnen */
+    align-items: center; /* Verticaal centreren van de inhoud in de container */
+    justify-content: center; /* Horizontaal centreren van de inhoud in de container */
+    margin-left: 120px;
+}
+
+/* Stijlen voor het formulier  */
+form
+{
+  background-color: rgb(51, 51, 51);; /* Achtergrondkleur wit */
+    display: flex; /* Weergave als een flex-container om formulierelementen uit te lijnen */
+    flex-direction: column; /* Stapel formulierelementen verticaal */
+    padding: 7vw 4vw; /* Binnenste opvulling van 7% van de breedte aan de boven- en onderkant en 4% van de breedte aan de zijkanten */
+    width: 90%; /* Breedte van 90% van de container */
+    max-width: 600px; /* Maximale breedte van 600 pixels voor formulier */
+    border: 2px solid rgb(254, 196, 112); /* Kader met een dikte van 2 pixels en een*/
+}
+
+/* Stijlen voor de knop*/
+form button 
+{
+    padding: 15px; /* Binnenste opvulling van 15px rond de knop */
+    background-color: rgb(254, 196, 112); /* Achtergrondkleur in hexadecimale notatie */
+    color: #fff; /* Tekstkleur wit */
+    font-size: 18px; /* Tekstgrootte van 18 pixels */
+    border: 0; /* Geen rand om de knop */
+    outline: none; /* Verwijder de focusomtrek */
+    cursor: pointer; /* Wijzig de cursor naar een handje om interactie aan te geven */
+    width: 500px; /* Breedte van 150 pixels voor de knop */
+    margin: 20px auto 0; /* Bovenmarge van 20px, geen zijmarges en geen ondermarge */
+    border-radius: 15px; /* De knop ziet er uit als een cirkel */
+}
+
+/* Stijlen voor tekstvak  */
+.text-box-afspraak 
+{
+    width: 100%; /* Breedte van 100% van de container */
+    color: white; /* Tekstkleur wit */
+    position: absolute; /* Absolute positionering voor nauwkeurige plaatsing */
+    left: 50%; /* Horizontale uitlijning in het midden */
+    transform: translate(-50%,-50%); /* Horizontale en verticale uitlijning in het midden */
+    text-align: center; /* Centreer de tekst in het tekstvak */
+}
+
+/* Stijlen voor labels in het formulier */
+label 
+{
+    font-weight: bold; /* Vetgedrukte tekst voor labels */
+}
+
+a 
+{
+  text-decoration: none;
+  cursor: pointer; /*cursor is zichtbaar*/
+}
+
+a:visited 
+{
+  color: rgb(255, 255, 255); /* Stel de kleur van bezochte links in op wit */
+}
+
+/* Media-query voor max-width 1170px */
+@media only screen and (max-width: 720px) {
+  /* Pas hier de stijlen aan voor schermen met een maximale breedte van 1170px */
+
+  .container {
+    margin-left: 4px; /* Aangepaste marge voor kleinere schermen */
+    margin-bottom: -970px;
+  }
+
+  form button {
+    width: 100%; /* Maak de knop 100% breedte voor kleinere schermen */
+  }
+
+  .contact-text{
+    margin-bottom: 800px; /* Beneden margin */
+  }
+
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape)
+{
+  .container {
+    margin-left: 4px; /* Aangepaste marge voor kleinere schermen */
+    max-width: 60%;
+    margin-left: 100px;
+  }
+
+  form button {
+    width: 100%; /* Maak de knop 100% breedte voor kleinere schermen */
+  }
+}
+
+/* Stijlen voor de afbeeldingen en omschrijvingen */
+
+/* Opmaak voor het projects-gedeelte */
+.projects {
+  margin: 0; /* Geen marge aan de buitenkant van het projects-gedeelte */
+  padding: 0; /* Geen opvulling aan de binnenkant van het projects-gedeelte */
+  display: flex; /* Gebruik een flexbox lay-out voor de projecten */
+  flex-direction: column; /* Zet de flexbox lay-out om naar kolommen */
+  align-items: center; /* Centreer items binnen de flexbox lay-out */
+  font-size: 24px; /* Lettergrootte voor het projects-gedeelte */
+  font-family: 'Roboto', sans-serif; /* Lettertype */
+  font-weight: 900; /* Vet lettertype voor het projects-gedeelte */
+  color: white; /* Tekstkleur wit */
+  margin-bottom: 50px; /* Ondermarge voor het projects-gedeelte */
+}
+
+/* Opmaak voor de container van de afbeeldingen */
+.image-container {
+  display: flex; /* Gebruik een flexbox lay-out voor de afbeeldingen */
+  justify-content: center; /* Centreer de afbeeldingen binnen de flexbox lay-out */
+  margin-top: 20px; /* Bovenmarge voor de afbeeldingen */
+  flex-wrap: wrap; /* Laat de afbeeldingen omvouwen naar de volgende regel als er niet genoeg ruimte is */
+}
+
+/* Opmaak voor de individuele image-box */
+.image-box {
+  margin: 10px; /* Buitenmarge voor de image-box */
+  text-align: center; /* Centreer de tekst binnen de image-box */
+  flex: 1; /* Hierdoor worden de image-box elementen verdeeld over de beschikbare ruimte */
+}
+
+/* Stijlen voor de afbeelding binnen de image-box */
+img {
+  max-width: 100%; /* Gebruik de volledige breedte van de image-box voor de afbeelding */
+  height: auto; /* Behoud de aspectverhouding van de afbeelding */
+}
+
+/* Opmaak voor de beschrijving van de afbeelding */
+.image-description {
+  margin-top: 5px; /* Bovenmarge voor de afbeeldingsbeschrijving */
+  font-weight: 100; /* Normaal lettertype voor de afbeeldingsbeschrijving */
+}
+
+/* Opmaak voor de tekst in het portfolio */
+.portfolio-text {
+  font-size: 12px; /* Lettergrootte voor de tekst in het portfolio */
+}
+
+/* Media-query voor schermen met een maximale breedte van 720px */
+@media only screen and (max-width: 720px) {
+  .projects {
+    font-size: 20px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-top: 100px; /* Aangepaste bovenmarge voor kleinere schermen */
+    margin-bottom: 450px; /* Aangepaste ondermarge voor kleinere schermen */
+  }
+
+  /* Aangepaste opmaak voor afbeeldingsbeschrijvingen op kleinere schermen */
+  .image-description {
+    padding: 10px;
+  }
+
+  /* Maak de image-box elementen 100% breedte voor kleinere schermen */
+  .image-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* Media-query voor schermen met een maximale hoogte van 575.98px en liggende oriëntatie */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .projects {
+    font-size: 20px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-top: 50px; /* Aangepaste bovenmarge voor kleinere schermen */
+  }
+
+  /* Aangepaste opmaak voor afbeeldingsbeschrijvingen op kleinere schermen */
+  .image-description {
+    padding: 10px;
+  }
+}
+
+/* Stijlen voor Hobby's pagina */
+
+/* Opmaak voor de h1 in het hobby-gedeelte */
+.hobby h1 {
+  font-size: 52px; /* Lettergrootte voor de h1 */
+  font-family: 'Roboto', sans-serif; /* Lettertype voor de h1 */
+  font-weight: 900; /* Vet lettertype voor de h1 */
+  color: white; /* Tekstkleur wit */
+  margin-bottom: 50px; /* Ondermarge voor de h1 */
+  margin-left: 45%; /* Linkermarge voor de h1 */
+}
+
+/* Opmaak voor de paragraaf in het hobby-gedeelte */
+main p {
+  font-size: 21px; /* Lettergrootte voor de paragraaf */
+  font-family: 'Roboto', sans-serif; /* Lettertype voor de paragraaf */
+  font-weight: 100; /* Normaal lettertype voor de paragraaf */
+  color: white; /* Tekstkleur wit */
+  margin-bottom: 50px; /* Ondermarge voor de paragraaf */
+  margin-left: 100px; /* Linkermarge voor de paragraaf */
+  margin-right: 100px; /* Rechtermarge voor de paragraaf */
+}
+
+/* Opmaak voor de h2 in het hobby-section-gedeelte */
+.hobby-section h2 {
+  color: #fff; /* Tekstkleur wit voor de h2 */
+}
+
+/* Opmaak voor de inline hobby-li */
+.hobby-li {
+  display: inline; /* Weergeven als inline elementen */
+  margin: 0 160px; /* Buitenmarge voor de inline elementen */
+}
+
+/* Opmaak voor de links in de hobby-nav */
+.hobby-nav a {
+  text-decoration: none; /* Geen decoratie voor de links */
+  color: rgb(254, 196, 112); /* Tekstkleur voor de links */
+  font-weight: bold; /* Vet lettertype voor de links */
+  font-size: 16px; /* Lettergrootte voor de links */
+}
+
+/* Opmaak voor het hobby-section-gedeelte */
+.hobby-section {
+  padding: 20px; /* Binnenopvulling voor het hobby-section-gedeelte */
+  margin: 20px; /* Buitenmarge voor het hobby-section-gedeelte */
+  background-color: rgb(51, 51, 51); /* Achtergrondkleur voor het hobby-section-gedeelte */
+  border-radius: 8px; /* Randradius voor het hobby-section-gedeelte */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schaduw voor het hobby-section-gedeelte */
+}
+
+/* Media-query voor schermen met een maximale breedte van 720px */
+@media screen and (max-width: 720px) {
+  .hobby h1 {
+    font-size: 36px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-left: 0; /* Geen linkermarge voor kleinere schermen */
+    text-align: center; /* Centreer de tekst voor kleinere schermen */
+  }
+
+  main p {
+    font-size: 18px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-left: 20px; /* Aangepaste linkermarge voor kleinere schermen */
+    margin-right: 20px; /* Aangepaste rechtermarge voor kleinere schermen */
+  }
+
+  .hobby-li {
+    display: block; /* Weergeven als blokelementen voor kleinere schermen */
+    margin: 0; /* Geen marge voor kleinere schermen */
+    text-align: center; /* Centreer de tekst voor kleinere schermen */
+  }
+
+  .hobby-nav a {
+    display: block; /* Weergeven als blokelementen voor kleinere schermen */
+    margin-bottom: 10px; /* Aangepaste onderrand voor kleinere schermen */
+  }
+}
+
+/*Resultaten pagina*/
+
+/* Opmaak voor de h1 in het resultaten-gedeelte */
+.resultaten h1 {
+  font-size: 52px; /* Lettergrootte voor de h1 */
+  font-family: 'Roboto', sans-serif; /* Lettertype voor de h1 */
+  font-weight: 900; /* Vet lettertype voor de h1 */
+  color: white; /* Tekstkleur wit */
+  margin-bottom: 50px; /* Ondermarge voor de h1 */
+  margin-left: 45%; /* Linkermarge voor de h1 */
+  color: rgb(254, 196, 112); /* Tekstkleur oranje voor de h1 */
+}
+
+/* Opmaak voor de tabel */
+table {
+  width: 90%; /* Breedte van de tabel */
+  border-collapse: collapse; /* Samenvoegen van de randen van de cellen */
+  margin-top: 20px; /* Bovenmarge voor de tabel */
+  margin-left: 70px; /* Linkermarge voor de tabel */
+}
+
+/* Opmaak voor de kop- en celinhoud van de tabel */
+th, td {
+  border: 1px solid rgb(14, 133, 199); /* Rand voor de cellen */
+  padding: 8px; /* Binnenopvulling voor de cellen */
+  text-align: left; /* Tekstuitlijning naar links voor de cellen */
+  color: #fff; /* Tekstkleur wit voor de cellen */
+}
+
+/* Opmaak voor de kop van de tabel */
+th {
+  background-color: #039df7; /* Achtergrondkleur voor de kop */
+}
+
+/* Opmaak voor de laatste cel in elke rij */
+td:last-child {
+  width: 5%; /* Breedte van de laatste cel in elke rij */
+}
+
+/* Opmaak voor het container-resultaten-gedeelte */
+#container-resultaten {
+  display: flex; /* Gebruik een flexbox lay-out */
+  width: 100%; /* Breedte van de container */
+  align-items: center; /* Items verticaal centreren */
+  justify-content: center; /* Items horizontaal centreren */
+  height: 100vh; /* Hoogte van de container */
+  margin-left: 70px; /* Linkermarge voor de container */
+}
+
+/* Opmaak voor het iframe-container-gedeelte */
+#iframe-container {
+  flex: 1; /* Flexibele groei voor het iframe-container */
+  border: 2px solid rgb(254, 196, 112); /* Rand voor het iframe-container */
+  height: 400px; /* Hoogte van het iframe-container */
+}
+
+/* Opmaak voor het text-container-gedeelte */
+#text-container {
+  flex: 1; /* Flexibele groei voor het text-container */
+  padding: 20px; /* Binnenopvulling voor het text-container */
+  color: #fff; /* Tekstkleur wit voor het text-container */
+}
+
+/* Media-query voor schermen met een maximale breedte van 720px */
+@media only screen and (max-width: 720px) {
+  .resultaten h1 {
+    font-size: 36px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-left: 30%; /* Aangepaste linkermarge voor kleinere schermen */
+  }
+
+  table {
+    margin-left: 20px; /* Aangepaste linkermarge voor de tabel op kleinere schermen */
+  }
+
+  #container-resultaten {
+    flex-direction: column; /* Flexbox lay-out naar kolommen voor kleinere schermen */
+    height: auto; /* Automatische hoogte voor kleinere schermen */
+  }
+
+  #iframe-container {
+    margin-top: 100px; /* Aangepaste bovenmarge voor het iframe-container op kleinere schermen */
+  }
+
+  #text-container {
+    margin-bottom: 250px; /* Aangepaste ondermarge voor kleinere schermen */
+    padding-bottom: 0; /* Verwijder de extra padding onderaan */
+    flex: none; /* Geen flexibele groei voor kleinere schermen */
+    width: 100%; /* Breedte van 100% voor kleinere schermen */
+  }
+
+  #text-container h2 {
+    font-size: 24px; /* Aangepaste lettergrootte voor de h2 op kleinere schermen */
+  }
+}
+
+/* Media-query voor schermen met een maximale hoogte van 575.98px en liggende oriëntatie */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .resultaten h1 {
+    font-size: 36px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-left: 40%; /* Aangepaste linkermarge voor kleinere schermen */
+    margin-top: 100px; /* Aangepaste bovenmarge voor kleinere schermen */
+  }
+
+  table {
+    margin-left: 50px; /* Aangepaste linkermarge voor de tabel op kleinere schermen */
+  }
+
+  #container-resultaten {
+    flex-direction: column; /* Flexbox lay-out naar kolommen voor kleinere schermen */
+    height: auto; /* Automatische hoogte voor kleinere schermen */
+  }
+
+  #iframe-container {
+    margin-top: 100px; /* Aangepaste bovenmarge voor het iframe-container op kleinere schermen */
+    margin-right: 150px; /* Aangepaste rechtermarge voor het iframe-container op kleinere schermen */
+  }
+
+  #text-container {
+    margin-bottom: 250px; /* Aangepaste ondermarge voor kleinere schermen */
+    padding-bottom: 0; /* Verwijder de extra padding onderaan */
+    flex: none; /* Geen flexibele groei voor kleinere schermen */
+    width: 100%; /* Breedte van 100% voor kleinere schermen */
+  }
+
+  #text-container h2 {
+    font-size: 24px; /* Aangepaste lettergrootte voor de h2 op kleinere schermen */
+    margin-left: 250px; /* Aangepaste linkermarge voor de h2 op kleinere schermen */
+  }
+}
+
+
+/*Pagina Ervaringen*/
+
+/* Stijlen voor de sectie*/
+.wrapper-links
+{
+    justify-content: center; /* Centreer de inhoud horizontaal binnen de flexcontainer */
+}
+
+/* Stijlen voor de container */
+.container-links 
+{
+    margin-top: 80px; /* Bovenmarge van 80px */
+    margin-left: 30px; /* Linkermarge van 150px */
+    margin-bottom: 30px; /* Ondermarge van 300px */
+    width: 80%; /* Breedte van 80% van de container */
+}
+
+/* Stijlen voor afbeeldingen*/
+.image-links img 
+{
+    width: 50%; /* Breedte van afbeeldingen is 50% van de container */
+    float: left; /* Laat afbeeldingen links uitlijnen en tekst ernaast plaatsen */
+    margin-right: 35px; /* Rechtermarge van 35px om tekst te scheiden */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe aan de afbeeldingen */
+}
+
+/* Stijlen voor bijschriften */
+.image-links figcaption 
+{
+    font-size: 25px; /* Lettergrootte van bijschriften is 25px */
+}
+
+/* Stijlen voor tekst*/
+.text-links p 
+{
+    font-size: 16px; /* Tekstgrootte van 16px */
+    font-weight: 300; /* Normale letterdikte */
+    line-height: 22px; /* Regelhoogte van 22px */
+    padding: 10px; /* Binnenste opvulling van 10px rond de alinea's */
+}
+
+/* Stijlen voor de sectie */
+.wrapper-rechts
+{
+    justify-content: center; /* Centreer de inhoud horizontaal binnen de flexcontainer */
+}
+
+/* Stijlen voor de container */
+.container-rechts
+{
+    margin-top: 330px; /* Bovenmarge van 330px */
+    margin-left: 150px; /* Linkermarge van 150px */
+    margin-bottom: 250px; /* Ondermarge van 250px */
+    width: 90%; /* Breedte van 90% van de container */
+}
+
+/* Stijlen voor afbeeldingen in */
+.image-rechts img 
+{
+    width: 45%; /* Breedte van afbeeldingen is 45% van de container */
+    float: right; /* Laat afbeeldingen rechts uitlijnen en tekst ernaast plaatsen */
+    margin-left: 35px; /* Linkermarge van 35px om tekst te scheiden */
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe aan de afbeeldingen */
+}
+
+/* Stijlen voor bijschriften in */
+.image-rechts figcaption 
+{
+    font-size: 25px; /* Lettergrootte van bijschriften is 25px */
+    margin-left: 35%; /* Voeg een linkermarge toe voor positionering */
+}
+
+/* Stijlen voor tekst*/
+.text-rechts p 
+{
+    color: 525050; /* Tekstkleur in hexadecimale notatie */
+    font-size: 15px; /* Tekstgrootte van 15px voor de alinea's */
+    font-weight: 300; /* Normale letterdikte */
+    line-height: 22px; /* Regelhoogte van 22px */
+    padding: 10px; /* Binnenste opvulling van 10px rond de alinea's */
+    padding-left: 200px; /* Linkermarge toevoegen voor positionering */
+}
+
+/* Stijlen voor de sectie*/
+.wrapper-rechts
+{
+    justify-content: center; /* Centreer de inhoud horizontaal binnen de flexcontainer */
+}
+
+/* Stijlen voor de container */
+.container-rechts
+{
+    margin-top: 80px; /* Bovenmarge van 80px */
+    margin-left: 350px; /* Linkermarge van 150px */
+    width: 80%; /* Breedte van 80% van de container */
+}
+
+/* Stijlen voor afbeeldingen*/
+.image-rechts img 
+{
+    width: 50%; /* Breedte van afbeeldingen is 50% van de container */
+    float: left; /* Laat afbeeldingen links uitlijnen en tekst ernaast plaatsen */
+    margin-right: 35px; /* Rechtermarge van 35px om tekst te scheiden */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe aan de afbeeldingen */
+}
+
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+
+    /* Aanpassingen voor elk locatiegedeelte zoals nodig */
+    .wrapper-links,
+    .wrapper-rechts 
+    {
+        margin-top: 20px; /* Aanpassen van margin-top voor ruimte */
+    }
+    
+    .wrapper-rechts
+    {
+        margin: 20px auto; /* Centreren en aanpassen van margin */
+        margin-left: -310px; /* Aanpassen van margin-left voor ruimte */
+        width: 100%;
+    }
+
+    .image-links img,
+    .image-rechts img
+    {
+        width: 100%; /* Aanpassen van afbeeldingsbreedte */
+        float: none; /* Verwijder float */
+        margin: 0; /* Reset margin */
+        box-shadow: none; /* Verwijder box-shadow */
+    }
+    .image-links figcaption,
+    .image-rechts figcaption 
+    {
+        font-size: 20px; /* Aanpassen van lettergrootte */
+    }
+    .text-links p,
+    .text-rechts p
+    {
+        font-size: 14px; /* Aanpassen van lettergrootte */
+        padding: 10px 0; /* Aanpassen van padding */
+        text-align: center; /* Tekst centreren */
+    }
+    .image-rechts figcaption 
+    {
+        font-size: 20px; /* Aanpassen van lettergrootte */
+        margin-left: -2px; /* Aanpassen van margin-left voor ruimte */
+    }
+}
+
+/* Ervaringen */
+
+/* Opmaak voor de h1 in het ervaringen-gedeelte */
+.ervaringen h1 {
+  font-size: 52px; /* Lettergrootte voor de h1 */
+  font-family: 'Roboto', sans-serif; /* Lettertype voor de h1 */
+  font-weight: 900; /* Vet lettertype voor de h1 */
+  color: white; /* Tekstkleur wit */
+  margin-bottom: 50px; /* Ondermarge voor de h1 */
+  margin-left: 45%; /* Linkermarge voor de h1 */
+  color: rgb(254, 196, 112); /* Tekstkleur oranje voor de h1 */
+}
+
+/* Opmaak voor het figcaption in het ervaringen-gedeelte */
+.ervaringen figcaption {
+  color: rgb(254, 196, 112); /* Tekstkleur oranje voor het figcaption */
+}
+
+/* Media-query voor schermen met een maximale breedte van 720px */
+@media only screen and (max-width: 720px) {
+  .ervaringen h1 {
+    font-size: 36px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-left: 30%; /* Aangepaste linkermarge voor kleinere schermen */
+  }
+}
+
+/* Media-query voor schermen met een maximale hoogte van 575.98px en liggende oriëntatie */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .ervaringen h1 {
+    font-size: 36px; /* Aangepaste lettergrootte voor kleinere schermen */
+    margin-left: 40%; /* Aangepaste linkermarge voor kleinere schermen */
+  }
+}
+
+/* Javascript Copyright */
+
+/* Opmaak voor het javascriptcopyright-gedeelte */
+#javascriptcopyright {
+  text-align: center; /* Tekstuitlijning in het midden */
+  font-family: 'Roboto', sans-serif; /* Lettertype voor het javascriptcopyright-gedeelte */
+  font-weight: 400; /* Normaal lettertype voor het javascriptcopyright-gedeelte */
+  font-size: 14px; /* Lettergrootte voor het javascriptcopyright-gedeelte */
+  color: #fff; /* Tekstkleur wit voor het javascriptcopyright-gedeelte */
+}

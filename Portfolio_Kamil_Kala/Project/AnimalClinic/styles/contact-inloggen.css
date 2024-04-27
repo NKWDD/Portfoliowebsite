@@ -1,0 +1,572 @@
+/* Algemene opmaak die van toepassing is op alle elementen op de webpagina */
+* 
+{
+    margin: 0; /* Boven-, onder-, links- en rechtsmarges worden gereset naar 0. */
+    padding: 0; /* Het vulling van alle elementen wordt gereset naar 0. */
+    font-family: 'Poppins', sans-serif; /* De lettertypefamilie 'Poppins' wordt ingesteld als de standaardlettertype voor alle elementen. */
+}
+
+/* Opmaak voor de headersectie */
+.header 
+{
+    min-height: 100vh; /* Minimale hoogte van 100% van het scherm (volledige schermhoogte) wordt ingesteld. */
+    width: 100%; /* De breedte wordt ingesteld op 100% van de oudercontainer. */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../images/GettyImages-1338829692.webp); /* Een achtergrondafbeelding en een semi-transparante overlay worden toegevoegd aan de header. */
+    background-size: cover; /* De achtergrondafbeelding wordt geschaald om het volledige scherm te bedekken. */
+    position: relative; /* Het positionele context van de header wordt ingesteld op 'relative'. */
+}
+
+/* Opmaak voor de navigatiebalk */
+nav 
+{
+    display: flex; /* Het navigatie-element wordt weergegeven als een flexcontainer. */
+    padding: 2% 6%; /* Boven- en ondermarges worden ingesteld op 2% en zijmarges op 6%. */
+    justify-content: space-between; /* De inhoud wordt verdeeld langs de hoofdas met ruimte ertussen. */
+    align-items: center; /* De inhoud wordt verticaal gecentreerd binnen de navigatiebalk. */
+}
+
+/* Stijlen om het menu te tonen wanneer het actief is */
+.nav-links.active 
+{
+    right: 0; /* Het menu wordt weergegeven op de rechterkant van de navigatiebalk. */
+}
+
+/* Stijlen om het menu te verbergen wanneer het niet actief is */
+.nav-links 
+{
+    right: -200px; /* Het menu wordt verborgen door het 200 pixels naar rechts te verschuiven. */
+    transition: right 0.3s; /* Een vloeiende overgang van de 'right' eigenschap met een duur van 0,3 seconden wordt toegevoegd. */
+}
+
+/* Opmaak voor het logo in de navigatiebalk */
+nav img 
+{
+    width: 150px; /* De breedte van het logo wordt ingesteld op 150 pixels. */
+    border-radius: 100px; /* Een ronde rand (border-radius) wordt toegevoegd aan het logo. */
+}
+
+/* Opmaak voor de "Inloggen" knop */
+.btn-inloggen 
+{
+    width: 60px; /* De breedte van de "Inloggen" knop wordt ingesteld op 60 pixels. */
+    height: 50%; /* De hoogte wordt ingesteld op 50% van de oudercontainer. */
+    background: transparent; /* De achtergrond van de knop is transparant. */
+    border: 2px solid #e68200; /* Een 2 pixels dikke rand met de kleur #e68200 wordt toegevoegd. */
+    outline: none; /* Standaard focusstijlen worden verwijderd. */
+    border-radius: 6px; /* Een afgeronde rand (border-radius) van 6 pixels wordt toegevoegd. */
+    margin-left: 10px; /* Een linker marge van 10 pixels wordt toegevoegd. */
+    transition: 0.5s; /* Een overgang met een duur van 0,5 seconden wordt toegevoegd. */
+}
+
+/* Stijlen voor de "Inloggen" knop wanneer erover wordt gehoverd */
+.btn-inloggen:hover 
+{
+    background-color: #e68200; /* De achtergrondkleur van de knop wordt veranderd in #e68200 bij hover. */
+}
+
+/* Opmaak voor de navigatielinks */
+.nav-links 
+{
+    flex: 1; /* Het neemt flexibele ruimte in binnen de navigatiebalk. */
+    text-align: right; /* De tekst in de navigatielinks wordt uitgelijnd naar rechts. */
+}
+
+/* Opmaak voor de lijstitems in de navigatielinks */
+.nav-links ul li 
+{
+    list-style: none; /* Standaard lijstmarkeringen worden verwijderd. */
+    display: inline-block; /* De lijstitems worden weergegeven als inline-blokken. */
+    padding: 8px 12px; /* Binnen- en buitenmarges van de lijstitems worden ingesteld. */
+    position: relative; /* Het positionele context van de lijstitems wordt ingesteld op 'relative'. */
+    top: -50px; /* De lijstitems worden 50 pixels omhoog verplaatst. */
+}
+
+/* Opmaak voor de ankertags in de navigatielinks */
+.nav-links ul li a 
+{
+    color: #fff; /* Tekstkleur van de ankertags wordt ingesteld op wit. */
+    text-decoration: none; /* Onderstreping van ankertags wordt verwijderd. */
+    font-size: 13px; /* Lettergrootte wordt ingesteld op 13 pixels. */
+}
+
+/* Stijlen voor het onderstrepen van de lijstitems bij hover */
+.nav-links ul li::after 
+{
+    content: ''; /* Lege inhoud wordt toegevoegd om het onderstrepingselement weer te geven. */
+    width: 0px; /* De breedte wordt aanvankelijk ingesteld op 0 pixels. */
+    height: 2px; /* De hoogte van de onderstreping wordt ingesteld op 2 pixels. */
+    background: #e68200; /* De achtergrondkleur van de onderstreping is #e68200. */
+    display: block; /* Het onderstrepingselement wordt weergegeven als een blok. */
+    margin: auto; /* Het wordt horizontaal gecentreerd binnen de lijstitems. */
+    transition: 0.5s; /* Een vloeiende overgang met een duur van 0,5 seconden wordt toegevoegd. */
+}
+
+/* Stijlen voor het uitbreiden van de onderstreping bij hover */
+.nav-links ul li:hover::after 
+{
+    width: 100%; /* De breedte van de onderstreping wordt 100% bij hover. */
+}
+
+/* Verberg het menu-icoon op grotere schermen */
+nav .fa 
+{
+    display: none; /* Het menu-icoon is standaard verborgen op grotere schermen. */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor kopgrootte en navigatielinks op kleinere schermen */
+    .header
+    {
+        min-height: 950px; /* Verwijder de minimale hoogte voor flexibiliteit en pas de hoogte aan voor kleinere schermen. */
+        width: 100%; /* De breedte wordt ingesteld op 100% van de oudercontainer. */
+    }
+
+    .text-box h1 
+    {
+        font-size: 20px; /* De lettergrootte van de kop wordt verkleind naar 20 pixels op kleinere schermen. */
+    }
+    .nav-links ul li 
+    {
+        display: block; /* De lijstitems worden weergegeven als blokken op kleinere schermen. */
+    }
+    .nav-links 
+    {
+        position: absolute; /* De positie van de navigatielinks wordt ingesteld op 'absolute' voor kleinere schermen. */
+        background: #e68200; /* De achtergrondkleur van de navigatielinks wordt gewijzigd naar #e68200. */
+        height: 100vh; /* De hoogte wordt ingesteld op 100% van het schermhoogte op kleinere schermen. */
+        width: 200px; /* De breedte wordt ingesteld op 200 pixels op kleinere schermen. */
+        top: 0; /* De bovenkant wordt op 0 pixels geplaatst. */
+        right: -200px; /* De rechterkant wordt 200 pixels naar links verschoven om het menu te verbergen. */
+        text-align: left; /* Tekst in de navigatielinks wordt links uitgelijnd. */
+        z-index: 2; /* De z-index wordt verhoogd om boven andere elementen te staan. */
+        transition: 1s; /* Een vloeiende overgang met een duur van 1 seconde wordt toegevoegd. */
+    }
+    /* Toon het menu-icoon op kleinere schermen */
+    nav .fa 
+    {
+        display: block; /* Het menu-icoon wordt weergegeven op kleinere schermen. */
+        color: white; /* De kleur van het icoon wordt ingesteld op wit. */
+        margin: 10px; /* Marges worden toegevoegd aan het icoon. */
+        font-size: 20px; /* De lettergrootte van het icoon wordt ingesteld op 20 pixels. */
+        cursor: pointer; /* De cursor wordt gewijzigd in een wijzende hand bij hover. */
+    }
+    .nav-links ul 
+    {
+        padding: 30px; /* Binnenmarges worden toegevoegd aan de lijstitems. */
+    }
+}
+
+/* Contactformulier */
+
+/* Opmaak voor de container van het contactformulier */
+.container-contact
+{
+    width: 80%; /* Breedte van de container is 80% van de oudercontainer. */
+    margin: 50px auto; /* Boven- en ondermarges worden ingesteld op 50px, en zijmarges worden automatisch aangepast om in het midden te positioneren. */
+}
+
+/* Stijl voor de kop van het contactformulier */
+.container-contact h1
+{
+    color: #fff; /* Tekstkleur van de kop is wit. */
+}
+
+/* Stijl voor de paragraaf van het contactformulier */
+.container-contact p
+{
+    color: #fff; /* Tekstkleur van de paragraaf is wit. */
+}
+
+/* Opmaak voor de container van het contactformulier */
+.contact-box
+{
+    background-color: #fff; /* Achtergrondkleur is wit. */
+    display: flex; /* Het contactformulier wordt weergegeven als een flexcontainer. */
+}
+
+/* Opmaak voor het linker gedeelte van het contactformulier */
+.contact-links
+{
+    flex-basis: 40%; /* De flex-basis van het linker gedeelte is 40%. */
+    padding: 40px 60px; /* Binnen- en buitenmarges worden ingesteld. */
+}
+
+/* Opmaak voor het rechter gedeelte van het contactformulier */
+.contact-rechts{
+    flex-basis: 50%; /* De flex-basis van het rechter gedeelte is 50%. */
+    padding: 40px; /* Binnenmarges worden ingesteld. */
+    background-color: #e68200; /* Achtergrondkleur is #e68200. */
+    color: #fff; /* Tekstkleur is wit. */
+}
+
+/* Stijl voor koppen in het contactformulier */
+h1
+{
+    margin-bottom: 10px; /* Ondermarge van koppen is 10px. */
+}
+
+/* Stijl voor paragrafen in het contactformulier */
+.container-contact p
+{
+    margin-bottom: 40px; /* Ondermarge van paragrafen is 40px. */
+}
+
+/* Opmaak voor de rijen van invoervelden in het contactformulier */
+.input-row
+{
+    display: flex; /* De rijen worden weergegeven als een flexcontainer. */
+    justify-content: space-between; /* De inhoud wordt verdeeld met ruimte ertussen. */
+    margin-bottom: 20px; /* Ondermarge van de rijen is 20px. */
+}
+
+/* Opmaak voor de invoervelden in het contactformulier */
+.input-row .input-groep
+{
+    flex-basis: 45%; /* De flex-basis van de invoervelden is 45%. */
+}
+
+/* Stijl voor tekst- en tekstvelden in het contactformulier */
+input
+{
+    width: 100%; /* Breedte van tekstvelden is 100%. */
+    border: none; /* Rand wordt verwijderd. */
+    border-bottom: 1px solid #d1d0d0; /* Een onderstreping wordt toegevoegd onder de tekstvelden. */
+    outline: none; /* Standaard focusstijlen worden verwijderd. */
+}
+
+textarea
+{
+    width: 100%; /* Breedte van tekstvelden is 100%. */
+    border: 1px solid #d1d0d0; /* Een rand met een kleur wordt toegevoegd aan tekstvelden. */
+    outline: none; /* Standaard focusstijlen worden verwijderd. */
+}
+
+/* Stijl voor de tekst in de rechter container van het contactformulier */
+.contact-rechts td 
+{
+    color: rgb(255, 255, 255); /* Tekstkleur van tabelgegevens is wit. */
+}
+
+/* Stijl voor de verzendknop in het contactformulier */
+input[type="submit"] 
+{
+    background-color: #e68200; /* Achtergrondkleur van de verzendknop is #e68200. */
+    color: white; /* Tekstkleur is wit. */
+    padding: 10px 15px; /* Binnenmarges worden ingesteld. */
+    border: none; /* Rand wordt verwijderd. */
+    border-radius: 4px; /* Een afgeronde rand van 4px wordt toegevoegd. */
+    cursor: pointer; /* De cursor wordt gewijzigd in een handwijzer bij hover. */
+}
+
+input[type="submit"]:hover 
+{
+    background-color: darkorange; /* Achtergrondkleur van de verzendknop verandert in darkorange bij hover. */
+}
+
+@media screen and (max-width: 1170px) 
+{
+    /* Opmaak voor mobiel bij een maximale breedte van 1170px */
+
+    .container-contact 
+    {
+        width: 100%; /* Breedte van de container wordt ingesteld op 100%. */
+        margin: 20px auto; /* Boven- en ondermarges worden ingesteld op 20px, en zijmarges worden automatisch aangepast om in het midden te positioneren. */
+    }
+
+    .contact-links, .contact-rechts 
+    {
+        flex-basis: 100%; /* De flex-basis van zowel het linker- als het rechtergedeelte wordt 100% (volledige breedte). */
+        padding: 10px; /* Binnenmarges worden ingesteld op 10px voor beide delen. */
+        width: 100%; /* Beide delen worden volledige breedte van het scherm op kleinere schermen. */
+    }
+
+    h1 
+    {
+        margin-top: 75px; /* Bovenmarge van koppen wordt vergroot naar 75px. */
+        margin-bottom: 20px; /* Ondermarge van koppen wordt vergroot naar 20px. */
+    }
+
+    .contact-rechts td 
+    {
+        font-size: 12px; /* Tekstgrootte in de rechter container wordt verkleind naar 12px. */
+    }
+
+    .input-row 
+    {
+        flex-direction: column; /* De richting van de invoervelden wordt omgezet naar kolommen. */
+        margin-bottom: 10px; /* Ondermarge tussen de rijen wordt verkleind naar 10px. */
+    }
+
+    .input-row .input-groep 
+    {
+        flex-basis: 100%; /* De invoervelden worden volledige breedte binnen de kolommen. */
+    }
+}
+
+/* Inloggen Pagina */
+
+/* Opmaak voor de headersectie van de inlogpagina */
+.header-inloggen
+{
+    min-height: 100vh; /* Hier wordt de minimale hoogte van de header ingesteld op 100% van de viewporthoogte (volledig scherm) */
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../images/istockphoto-1306641965-2048x2048.jpg);
+    background-size: cover; /* Achtergrondafbeelding wordt schaalt om de hele header te bedekken */
+    position: relative;
+}
+
+/* Opmaak voor de inlogsectie */
+.inloggen
+{
+    display: flex; /* Hier wordt de weergave van de sectie ingesteld als een flex-container */
+    justify-content: center; /* Hiermee wordt de inhoud horizontaal gecentreerd in de sectie */
+    align-items: center; /* Hiermee wordt de inhoud verticaal gecentreerd in de sectie */
+    min-height: 100vh; /* Hier wordt de minimale hoogte van de inlogsectie ingesteld op 100% van de viewporthoogte (volledig scherm) */
+    box-sizing: border-box; /* Inhoudsgrootte omvat rand en padding */
+}
+
+/* Opmaak voor de wrapper rond het inlogformulier */
+.wrapper
+{
+    position: relative; /* Hier wordt de positionele eigenschap van de wrapper ingesteld op 'relative' */
+    width: 500px; /* De breedte van de wrapper wordt ingesteld op 500 pixels */
+    height: 480px; /* De hoogte van de wrapper wordt ingesteld op 480 pixels */
+    background: transparent; /* De achtergrond van de wrapper is transparant */
+    border: 2px solid rgba(255, 255, 255, .5); /* Een witte rand van 2 pixels met een lichte doorzichtigheid wordt toegevoegd */
+    border-radius: 15px; /* De hoeken van de wrapper krijgen een afronding van 15 pixels */
+    right: -35%; /* De wrapper wordt 35% naar rechts verschoven */
+    backdrop-filter: blur(20px); /* Er wordt een vervagingseffect toegepast op de inhoud achter de wrapper */
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5); /* Er wordt een schaduw met diepte toegevoegd aan de wrapper */
+    display: flex; /* De wrapper wordt weergegeven als een flex-container */
+    justify-content: center; /* Hiermee wordt de inhoud horizontaal gecentreerd in de wrapper */
+    margin-top: 50px; /* Bovenmarge van 50 pixels wordt toegevoegd aan de wrapper */
+}
+
+/* Opmaak voor het formulier binnen de wrapper */
+.wrapper .from-box
+{
+    width: 100%; /* De breedte van het formulier binnen de wrapper wordt ingesteld op 100% */
+    padding: 40px; /* Er wordt 40 pixels opvulling toegevoegd aan het formulier */
+}
+
+/* Stijl voor koppen in het inlogformulier */
+.box-inloggen h2
+{
+    font-size: 2em; /* De lettergrootte van de koppen in het inlogformulier wordt ingesteld op 2em (em wordt relatief aan de basisgrootte van de tekst) */
+    color: #ffffff; /* De tekstkleur van de koppen wordt ingesteld op wit */
+    text-align: center; /* De tekst wordt gecentreerd uitgelijnd in de koppen */
+}
+
+/* Opmaak voor invoervelden en labels in het inlogformulier */
+.input-box
+{
+    position: relative; /* Het positionele context van het input-box element wordt ingesteld op 'relative' */
+    width: 100%; /* De breedte van het input-veld wordt ingesteld op 100% */
+    height: 50px; /* De hoogte van het input-veld wordt ingesteld op 50 pixels */
+    border-bottom: 2px solid rgb(255, 255, 255); /* Er wordt een onderste rand van 2 pixels dik toegevoegd met witte kleur */
+    margin: 30px 0; /* Boven- en ondermarges worden ingesteld op 30 pixels, nul aan de zijkanten */
+}
+
+.input-box label
+{
+    position: absolute; /* Het positionele context van het label element wordt ingesteld op 'absolute'. */
+    top: 50%; /* Het label wordt verticaal gecentreerd binnen de input-box. */
+    left: 5px; /* De afstand vanaf de linkerkant van de input-box wordt ingesteld op 5 pixels. */
+    transform: translateY(-50%); /* Het label wordt verder gecentreerd door het omhoog te verplaatsen met -50% van zijn eigen hoogte. */
+    font-size: 1em; /* Lettergrootte wordt ingesteld op 1em. */
+    color: black; /* Tekstkleur van het label is zwart. */
+    font-weight: 500; /* Tekstdikte wordt ingesteld op 500 (medium). */
+    pointer-events: none; /* Hierdoor wordt het label niet-klikbaar en interfereert het niet met het klikken op het invoerveld. */
+    transition: .5s; /* Overgang van eigenschappen (bijv. 'top') duurt 0,5 seconden. */
+}
+
+.input-box input
+{
+    width: 100%; /* De breedte van het invoerveld wordt ingesteld op 100% van de oudercontainer. */
+    height: 100%; /* De hoogte wordt ingesteld op 100% van de oudercontainer. */
+    background: transparent; /* De achtergrond van het invoerveld is transparant. */
+    border: none; /* Er is geen rand rondom het invoerveld. */
+    outline: none; /* Verwijder standaardfocusstijlen. */
+    font-size: 1em; /* Lettergrootte wordt ingesteld op 1em. */
+    color: #ffffff; /* Tekstkleur van het invoerveld is wit. */
+    font-weight: 600; /* Tekstdikte wordt ingesteld op 600 (dik). */
+    padding: 0 35px 0 5px; /* Binnen- en buitenopvulling wordt ingesteld voor het invoerveld. */
+}
+
+.input-box .icon
+{
+    position: absolute; /* Het positionele context van het icoon wordt ingesteld op 'absolute'. */
+    right: 8px; /* Het icoon wordt 8 pixels vanaf de rechterkant van de input-box geplaatst. */
+    font-size: 1.2em; /* Lettergrootte van het icoon wordt ingesteld op 1.2em. */
+    line-height: 55px; /* Lijnhoogte wordt ingesteld om het icoon verticaal te centreren binnen de input-box. */
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top: -5px; /* Het label wordt omhoog verplaatst met -5 pixels als het invoerveld de focus heeft of gegevens bevat. */
+}
+
+/* Stijl voor de 'Onthouden' optie in het inlogformulier */
+.onthouden 
+{
+    font-size: .9em; /* Lettergrootte van de tekst voor de 'Onthouden' optie */
+    color: #fff; /* Tekstkleur is wit */
+    font-weight: 500; /* Letterdikte is 500 (medium) */
+    margin: -15px 0 15px; /* Bovenmarge -15px, ondermarge 15px */
+    display: flex; /* Elementen binnen 'onthouden' worden weergegeven als een flex-container */
+}
+
+.onthouden label input
+{
+    accent-color: #fff; /* Tekstkleur van het input-element binnen een label */
+    margin-right: 5px; /* Rechtermarge van 5px voor het input-element binnen een label */
+}
+
+.onthouden label {
+    display: flex; /* Elementen binnen een label worden weergegeven als een flex-container */
+    justify-content: space-between; /* Uitlijning van elementen binnen een label */
+    align-items: center; /* Verticale uitlijning van elementen binnen een label */
+}
+
+/* Stijl voor de 'Wachtwoord vergeten' link in het inlogformulier */
+.vergeten a
+{
+    font-size: .9em; /* Lettergrootte van de tekst voor de 'Wachtwoord vergeten' link */
+    color: #fff; /* Tekstkleur is wit */
+    font-weight: 500; /* Letterdikte is 500 (medium) */
+    display: flex; /* Elementen binnen 'vergeten' worden weergegeven als een flex-container */
+    margin-top: 40px; /* Bovenmarge van 40px voor de link */
+    margin-left: 15%; /* Link wordt 15% naar rechts verschoven */
+}
+
+/* Stijl voor de knop in het inlogformulier */
+.btn-inlogpagina
+{
+    width: 100%; /* Volledige breedte voor de knop */
+    height: 45px; /* Hoogte van 45px voor de knop */
+    background-color: #e68200; /* Achtergrondkleur van de knop */
+    border: none; /* Geen rand om de knop */
+    outline: none; /* Geen stijl bij focus */
+    border-radius: 6px; /* Afronding van de hoeken van de knop */
+    cursor: pointer; /* Cursor verandert in een handje bij zweven over de knop */
+    font-size: 1em; /* Lettergrootte van de tekst in de knop */
+    color: #fff; /* Tekstkleur is wit */
+    font-weight: 500; /* Letterdikte is 500 (medium) */
+    margin-top: 30px; /* Bovenmarge van 30px voor de knop */
+}
+
+/* Stijl voor de 'Login / Registreren' sectie */
+.login-register
+{
+    font-size: .9em; /* Lettergrootte van de tekst in de 'Login / Registreren' sectie */
+    color: #fff; /* Tekstkleur is wit */
+    text-align: center; /* Tekst wordt gecentreerd uitgelijnd */
+    font-weight: 500; /* Letterdikte is 500 (medium) */
+    margin: 25px 0 10px; /* Bovenmarge 25px, ondermarge 10px */
+}
+
+.login-register p a 
+{
+    color: #fff; /* Tekstkleur van de koppelingen binnen de 'Login / Registreren' sectie */
+    text-decoration: none; /* Geen onderstreping voor koppelingen */
+    font-weight: 500; /* Letterdikte is 500 (medium) */
+    margin-left: 20px; /* Linkermarge van 20px voor de koppelingen */
+    text-decoration: underline; /* Onderstreping wordt toegevoegd bij zweven over de koppelingen */
+}
+
+.login-register p a:hover
+{
+    text-decoration: underline; /* Onderstreping wordt toegevoegd bij zweven over de koppelingen */
+}
+
+/* Hieronder begint de @media query voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    .header-inloggen 
+    {
+      min-height: 950px; /* Verwijder de minimale hoogte voor flexibiliteit */
+      width: 100%;
+    }
+  
+    .inloggen 
+    {
+      align-items: flex-start; /* Plaats het inlogformulier bovenaan het scherm */
+    }
+  
+    .wrapper 
+    {
+      width: 90%; /* Verminder de breedte van de wrapper voor kleinere schermen */
+      height: auto; /* Pas de hoogte aan op basis van de inhoud */
+      right: 0; /* Plaats de wrapper op zijn oorspronkelijke positie */
+      margin-top: 100px; /* Verklein de bovenmarge */
+      margin-left: 25px;
+    }
+  
+    .wrapper .from-box 
+    {
+      padding: 20px; /* Verklein het interne veld voor kleinere schermen */
+    }
+  
+    .input-box 
+    {
+      margin: 15px 0; /* Verklein de marges tussen de invoervelden */
+    }
+    
+    .vergeten a 
+    {
+      margin-left: 20%; /* Pas de marge aan voor kleinere schermen */
+    }
+}
+
+/* Stijl voor de sociale media sectie */
+.social-media 
+{
+    min-width: 100vh; /* Minimale breedte van 100% van de viewporthoogte */
+    width: 100%; /* Volledige breedte voor de sociale media sectie */
+    text-align: center; /* Tekst wordt gecentreerd uitgelijnd */
+    padding: 30px 0; /* Boven- en ondermarge van 30px */
+    background-color: rgb(126, 126, 126); /* Achtergrondkleur van de sociale media sectie */
+}
+
+/* Stijlen voor de kop in "Social Media" */
+.social-media h4
+{
+    margin-bottom: 20px; /* Ondermarge van 20px voor de kop in de "Social Media" sectie */
+    margin-top: 20px; /* Bovenmarge van 20px voor de kop in de "Social Media" sectie */
+    font-weight: 600px; /* Letterdikte van 600 (extra vet) voor de kop */
+    color: #fff; /* Tekstkleur is wit */
+}
+
+/* Stijlen voor tekst in "Social Media" */
+.social-media p 
+{
+    color: #fff; /* Tekstkleur is wit */
+}
+
+/* Stijl voor de pictogrammen van sociale media */
+.icons
+{
+    margin: 0 13px; /* Linker- en rechtermarge van 13px voor de pictogrammen van sociale media */
+    cursor: pointer; /* Cursor verandert in een handje bij zweven over de pictogrammen */
+    padding: 18px; /* Opvulling van 18px voor de pictogrammen */
+}
+
+/* Mediaquery voor schermen met een maximale breedte van 1170px */
+@media screen and (max-width: 1170px) 
+{
+    /* Aanpassingen voor "Social Media" sectie op kleinere schermen */
+    .social-media 
+    {
+        min-width: 40vh; /* Minimale breedte van 40% van de viewporthoogte voor de "Social Media" sectie */
+        width: 100%; /* Volledige breedte voor de "Social Media" sectie */
+    }
+    .social-media h4 
+    {
+        margin-bottom: 25px; /* Ondermarge van 25px voor de kop in de "Social Media" sectie op kleinere schermen */
+        margin-top: 20px; /* Bovenmarge van 20px voor de kop in de "Social Media" sectie op kleinere schermen */
+        font-weight: 600px; /* Letterdikte van 600 (extra vet) voor de kop op kleinere schermen */
+    }
+}

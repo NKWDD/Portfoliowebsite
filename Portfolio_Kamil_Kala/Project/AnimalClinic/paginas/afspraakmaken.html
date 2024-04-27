@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Documenttype en taalinstelling -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Animal Clinic - De Beste Dierenkliniek in Nederland">
+  
+  <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Koppeling naar lettertypen via Google Fonts en FontAwesome CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@700&family=Open+Sans:wght@700&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  
+  <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+  <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/javascript.js" defer></script>
+  
+  <!-- Titel van de webpagina -->
+  <title>Animal Clinic</title>
+</head>
+<body>
+  <!-- Headersectie voor afspraakmaken -->
+  <section class="header-afspraak">
+    <!-- Moduleheader: Headersectie voor het maken van een afspraak -->
+    <nav>
+      <!-- Navigatiemenu en logo -->
+      <a href="../index.html"><img src="../images/Logo.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+          <!-- Navigatiemenu-items -->
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="afspraakmaken.html">AFSPRAAK MAKEN</a></li>
+          <li><a href="onze-kliniek.html">ONZE KLINIEK</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li class="btn-inloggen"><a href="inloggen.html">INLOGGEN</a></li>
+        </ul>
+      </div>
+      <i class="fa solid fa-bars" id="navLinks" onclick="showmenu()"></i>
+    </nav>
+
+    <div class="text-box-afspraak">
+      <!-- Welkomsttekst en contactinformatie -->
+      <h1>Neem contact op met onze dierenkliniek</h1>
+      <br>
+      <p>Bij Animal Clinic begrijpen we dat uw huisdier een speciale plek inneemt in uw hart en dat de <br> gezondheid en het welzijn van uw harige vriend onze hoogste prioriteit zijn.</p>
+      <hr>
+      <ol>
+        <!-- Openingstijden -->
+        <li>Maandag - Vrijdag: 9:00 - 18:00</li>
+        <li>Zaterdag: 10:00 - 14:00</li>
+        <li>Zondag: Gesloten</li>
+      </ol>
+    </div>
+
+    <div class="container">
+      <!-- Afspraakformulier -->
+      <form id="appointmentForm-afspraak">
+        <label for="petName">Naam van het dier:</label>
+        <input type="text" id="petName" name="petName" placeholder="Naam van het dier" required><br>
+
+        <label for="age">Leeftijd van het dier:</label>
+        <input type="number" id="age" name="age" placeholder="Leeftijd van het dier" required><br>
+
+        <label for="hasVaccinations">Is het dier gevaccineerd?</label>
+        <input type="checkbox" id="hasVaccinations" name="hasVaccinations"><br>
+
+        <label for="appointmentDate">Afspraakdatum:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required><br>
+
+        <label for="emergency">Is dit een noodgeval?</label>
+        <label for="emergency-ja">
+          Ja <input type="checkbox" id="emergency" name="emergency" value="true">
+        </label>
+        <label for="emergency-nee">
+          Nee <input type="checkbox" id="emergency" name="emergency" value="false">
+        </label>
+        <br>
+        <button id="verstuurKnop-afspraak" type="submit">Versturen</button>
+      </form>
+    </div>
+  </section>
+  <!--Sociale media sectie-->
+  <hr class="social-mediahr">
+  <section class="social-media">
+    <!-- Moduleheader: Sociale media sectie -->
+    <h4>About Us</h4>
+    <p>Bij Animal Clinic zijn we meer dan alleen een dierenkliniek; we zijn een toegewijd team van dierenliefhebbers die gepassioneerd zijn over het bieden van uitzonderlijke zorg voor uw geliefde huisdieren.</p>
+    <div class="icons">
+      <!-- Pictogrammen voor sociale media met koppelingen naar externe websites -->
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #e68200;"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" style="color: #e68200;"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #e68200;"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in" style="color: #e68200;"></i></a>
+    </div>
+    <p>Gemaakt door Kamil<i class="fas fa-rocket" style="color: #e68200;"></i></p>
+  </section>
+</body>
+</html>

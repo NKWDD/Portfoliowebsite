@@ -1,0 +1,35 @@
+/*Resetten van de standaard marges van het body element naar 0*/
+body {
+  margin: 0;
+}
+
+/*Stijlen voor het hoofdcontainer van de boxen*/
+#box-wrapper 
+{
+  background-color: bisque; /*Achtergrondkleur instellen op bisque*/
+  display: flex; /*Gebruik maken van flexbox*/
+  flex-direction: row-reverse; /*De volgorde van de rij omkeren*/
+  justify-content: space-around; /*Ruimte verdelen tussen de elementen in de rij*/
+}
+
+/*Stijlen voor de article*/
+article 
+{
+  background-color: magenta; /*Achtergrondkleur instellen op magenta*/
+  width: 18%; /*Breedte van elk artikel instellen op 18% van de container*/
+  margin: 20px; /*Buitenmarges van elk artikel instellen op 20px*/
+}
+
+/*Stijlen voor koppen binnen de artikelen*/
+h2 
+{
+  padding-left: 20px; /*Linkermarge toevoegen aan koppen binnen artikelen*/
+}
+
+/* Stijlen voor alinea's binnen de artikelen */
+p
+{
+  width: 80%; /*Breedte van alinea's instellen op 80% van de container*/
+  margin: 0 auto; /*Horizontaal centreren van alinea's*/
+  padding-bottom: 15px; /*Ondermarge toevoegen aan alinea's*/
+}

@@ -1,0 +1,144 @@
+<head>
+    <!-- Documenttype en taalinstelling -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Animal Clinic - De Beste Dierenkliniek in Nederland">
+    
+    <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Koppeling naar lettertypen via Google Fonts en FontAwesome CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@700&family=Open+Sans:wght@700&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    
+    <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+    <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+    <script src="../JavaScript/javascript.js"defer></script>
+    
+    <!-- Titel van de webpagina -->
+    <title>Animal Clinic</title>
+  </head>
+<body>
+    <section class="header-kliniek">
+        <nav>
+            <!-- Logo en navigatiemenu voor mobiel -->
+            <a href="../index.html"><img src="../images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <!-- Navigatiemenu-items -->
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="afspraakmaken.html">AFSPRAAK MAKEN</a></li>
+                    <li><a href="onze-kliniek.html">ONZE KLINIEK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="btn-inloggen"><a href="inloggen.html">INLOGGEN</a></li>
+                </ul>
+            </div>
+            <i class="fa solid fa-bars" id="navLinks" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box-kliniek">
+            <h1>Onze klinieken in Nederland</h1>
+            <p>Nieuwe pootstappen naar gezondheid</p>
+            <!-- Navigatiekoppelingen naar secties op dezelfde pagina -->
+            <a class="locaties-btn" href="#section1">Amsterdam</a>
+            <a class="locaties-btn" href="#section2">Den bosch</a>
+            <a class="locaties-btn" href="#section3">Rotterdam</a>
+        </div>
+    </section>
+
+    <!---Kliniek-->
+    <h1 id="section1" class="kliniek">Locaties</h1>
+    <p class="kliniek">In het hart van Animal Clinic, zorgen wij met liefde en deskundigheid voor uw dierbare metgezellen</p>
+
+    <section class="wrapper-amsterdam-kliniek">
+        <div class="container-amsterdam-kliniek">
+            <div class="image-amsterdam-kliniek">
+              <figure>
+                <img src="../images/kliniek-optie2.jpg">
+                <figcaption>Kliniek Amsterdam</figcaption>
+            </div>
+            <div class="text-amsterdam-kliniek">
+                <p>
+                    Onze dierenkliniek in het bruisende <span class="vetgedrukt">Amsterdam</span> is een toevluchtsoord voor dieren en hun eigenaren. Gevestigd te midden van de betoverende grachten en historische pracht van de stad, streven wij ernaar om de hoogste normen van zorg en compassie te bieden aan uw geliefde metgezellen. Met een toegewijd en deskundig team van dierenartsen, staan we klaar om de gezondheid en het welzijn van uw huisdieren te waarborgen, terwijl we de unieke band tussen mens en dier koesteren. Bij onze <span class="vetgedrukt">dierenkliniek</span> vieren we niet alleen de schoonheid van Amsterdam, maar ook de liefde en toewijding die onze stadsgemeenschap voelt voor hun pluizige familieleden
+                </p>
+                <div class="iframe-container">
+                    <!-- Google Maps-kaart van de locatie -->
+                    <iframe class="iframe-container" width="400" height="250" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9879.578366696467!2d5.49493040250738!3d51.75325102604352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6fc8bf6f993c9%3A0xd66e10d0d7b717f6!2sAniCura%20Dierenkliniek%20Oss!5e0!3m2!1sen!2snl!4v1698500142384!5m2!1sen!2snl"
+                    framborder="0" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="wrapper-denbosch-kliniek">
+        <div class="container-denbosch-kliniek">
+            <div class="image-denbosch-kliniek">
+              <figure>
+                <img src="../images/Florida emergency hospital thinks big.jpg">
+                <figcaption>Kliniek s-Hertogenbosch</figcaption>
+              </figure>
+            </div>
+            <div class="text-denbosch-kliniek">
+                <p>
+                    Onze dierenkliniek in het prachtige <span class="vetgedrukt">s-Hertogenbosch</span> is een toegewijde plek waar dierenliefhebbers en hun geliefde metgezellen altijd welkom zijn. Gelegen in de sfeervolle omgeving van deze historische stad, omringen we uw huisdieren met zorg en expertise, terwijl we de unieke band tussen mens en dier eren.<br>
+                    Bij onze kliniek begrijpen we dat huisdieren deel uitmaken van uw familie, en we zijn vastbesloten om ervoor te zorgen dat ze altijd de best mogelijke zorg krijgen. Ons toegewijde team van dierenartsen en ondersteunend personeel staat paraat om uw huisdier te behandelen en te ondersteunen bij zijn gezondheid en welzijn.<br> Of het nu gaat om preventieve zorg, behandeling van ziekten of <span class="vetgedrukt">noodgevallen</span>, we zijn er voor u en uw trouwe metgezel.<br>
+                    In s-Hertogenbosch, waar de rijke geschiedenis samengaat met de warme gemeenschap, streven we ernaar om uw huisdier een gelukkig, gezond en lang leven te bieden. Samen bouwen we aan een mooie toekomst voor onze harige vrienden in deze prachtige stad.
+                </p>
+                <div class="iframe-container-denbosch">
+                    <!-- Google Maps-kaart van de locatie -->
+                    <iframe width="400" height="250" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.8954735808406!2d5.5026551999999995!3d51.75323489999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6fc9b059d880b%3A0xb62a5c1f05083003!2sVeterinary%20clinic%20Ruwaard!5e0!3m2!1sen!2snl!4v1698499039553!5m2!1sen!2snl"
+                    framborder="0" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section3" class="wrapper-rotterdam-kliniek">
+        <div class="container-rotterdam-kliniek">
+            <div class="image-rotterdam-kliniek">
+                <figure>
+                    <img src="../images/kliniek rotterdam.jpg">
+                    <figcaption>Kliniek Rotterdam</figcaption>
+                </figure>
+            </div>
+            <div class="text-rotterdam-kliniek">
+                <p>
+                    Onze dierenkliniek in het bruisende <span class="vetgedrukt">Rotterdam</span> is een betrouwbare haven voor dierenliefhebbers en hun geliefde metgezellen. Gelegen in de dynamische omgeving van deze moderne stad, omarmen we de diversiteit en energie van Rotterdam, terwijl we uw huisdieren omringen met zorg en professionaliteit.
+                    Bij onze kliniek begrijpen we dat huisdieren een speciale plaats innemen in uw leven en uw gezin. Ons toegewijde team van dierenartsen en ondersteunend personeel staat klaar om te zorgen voor de gezondheid en het welzijn van uw huisdier. Of het nu gaat om <span class="vetgedrukt">routinecontroles</span>, behandeling van ziekten of spoedeisende zorg, wij staan paraat om u en uw trouwe metgezel te ondersteunen.
+                    In Rotterdam, waar de skyline de horizon domineert en de gemeenschap divers en inclusief is, streven we ernaar om de best mogelijke zorg te bieden aan uw huisdier. Samen bouwen we aan een gezonde en gelukkige toekomst voor onze harige vrienden in deze bruisende stad.
+                </p>
+                <div class="iframe-container">
+                    <!-- Google Maps-kaart van de locatie -->
+                    <iframe class="iframe-container" width="400" height="250" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4938.518739814906!2d5.518276593579099!3d51.764865400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6fc5f5886e84d%3A0xf662be999da971a3!2sDiergeneeskundig%20Centrum%20Oss!5e0!3m2!1sen!2snl!4v1698500031897!5m2!1sen!2sn"
+                    framborder="0" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="welke-kliniek">
+        <h1>Welke kliniek vindt jij de mooiste?</h1>
+        <p>Kies een locatie: Amsterdam, s-Hertogenbosch, Rotterdam</p>
+        <!-- Invoerveld voor de gebruiker om een locatie te kiezen -->
+        <input type="text" id="locatieInput" placeholder="Voer locatie in">
+        <button onclick="checkLocatie()">Controleer locatie</button>
+        <!-- Een element om de resultaten weer te geven -->
+        <p id="locatieResultaat"></p>
+    </section>
+     <!-- Social Media sectie met informatie over Animal Clinic en sociale media -->
+    <section class="social-media">
+    <h4>About Us</h4>
+    <p>Bij Animal Clinic zijn we meer dan alleen een dierenkliniek; we zijn een toegewijd team van dierenliefhebbers die gepassioneerd zijn over het bieden van uitzonderlijke zorg voor uw geliefde huisdieren.</p>
+    <!-- Pictogrammen voor sociale media met koppelingen naar externe websites -->
+    <div class="icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #e68200;"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" style="color: #e68200;"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #e68200;"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in" style="color: #e68200;"></i></a>
+    </div>
+    <p>Gemaakt door Kamil<i class="fas fa-rocket" style="color: #e68200;"></i></p>
+  </section>
+</body>
+</html>

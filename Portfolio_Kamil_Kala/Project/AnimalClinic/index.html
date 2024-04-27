@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Documenttype en taalinstelling -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Animal Clinic - De Beste Dierenkliniek in Nederland">
+  
+  <!-- Koppeling naar externe CSS-bestanden en vooraf laden van bronnen -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Koppeling naar lettertypen via Google Fonts en FontAwesome CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@700&family=Open+Sans:wght@700&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  
+  <!-- Koppeling naar het FontAwesome JavaScript-bestand en het eigen JavaScript-bestand met 'defer' attribuut -->
+  <script src="https://kit.fontawesome.com/bfb16982fa.js" crossorigin="anonymous"></script>
+  <script src="JavaScript/javascript.js" defer></script>
+  
+  <!-- Titel van de webpagina -->
+  <title>Animal Clinic</title>
+</head>
+<body>
+  <!-- Headersectie met navigatie en welkomsttekst -->
+  <section class="header">
+    <!-- Moduleheader: Headersectie bevat het navigatiemenu en welkomsttekst -->
+    <nav>
+      <!-- Logo en navigatiemenu voor mobiel -->
+      <a href="index.html"><img src="images/Logo.png" alt="Achtergrond van website"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+          <!-- Navigatiemenu-items -->
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="paginas/afspraakmaken.html">AFSPRAAK MAKEN</a></li>
+          <li><a href="paginas/onze-kliniek.html">ONZE KLINIEK</a></li>
+          <li><a href="paginas/contact.html">CONTACT</a></li>
+          <li class="btn-inloggen"><a href="./paginas/inloggen.html">INLOGGEN</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <div class="text-box">
+      <!-- Welkomsttekst en overzicht van de kliniek -->
+      <h1 id="gebruikersnaam"></h1>
+      <h1 id="begroeting"></h1>
+      <h1>De Beste Dierenkliniek in Nederland</h1>
+      <p>Bij Animal Clinic begrijpen we dat uw huisdier een speciale plek inneemt in uw hart en dat de gezondheid en het welzijn van uw harige vriend onze hoogste prioriteit zijn.</p>
+      <!-- Knop om naar de "Over ons" sectie te scrollen -->
+      <a class="overons-btn" onclick="scrollToSection()">Over ons</a>
+    </div>
+  </section>
+  <!-- Sectie die de specialiteiten van de kliniek toont -->
+  <section class="onze-specialiteit">
+    <!-- Moduleheader: Deze sectie toont de specialiteiten van de kliniek -->
+    <h1 id="scrollTarget">Onze Specialiteit</h1>
+    <p>&quot;Uitstekende <span class="onderstreep">Zorg</span> voor Uw Geliefde <span class="onderstreep">Huisdieren</span>.&quot;</p>
+    <div class="specialiteit-box">
+      <!-- Kolommen met informatie over medische expertise, chirurgische vaardigheden en liefdevolle verzorging -->
+      <div class="specialiteit-col">
+        <h3>Geavanceerde Medische Expertise</h3>
+        <p>
+          Onze <span class="vetgedrukt">dierenartsen</span> zijn hoogopgeleide professionals met uitgebreide ervaring in het diagnosticeren en behandelen van diverse aandoeningen bij dieren. Of uw huisdier nu last heeft van een aandoening of gewoon routinematige zorg nodig heeft, <span class="vetgedrukt">ons team</span> staat voor u klaar.
+        </p>
+      </div>
+      <div class="specialiteit-col">
+        <h3>Chirurgische Vaardigheid</h3>
+        <p>
+          In gevallen waarin <span class="vetgedrukt">chirurgische</span> ingrepen nodig zijn, kunt u vertrouwen op onze deskundige chirurgen. We beschikken over <span class="vetgedrukt">moderne faciliteiten en geavanceerde technologieën</span> om operaties veilig en effectief uit te voeren.
+        </p>
+      </div>
+      <div class="specialiteit-col">
+        <h3>Liefdevolle Verzorging</h3>
+        <p>
+          Naast onze technische bekwaamheid hechten we ook veel waarde aan het welzijn en <span class="vetgedrukt">comfort</span> van uw huisdier. Ons toegewijde team van <span class="vetgedrukt">dierenliefhebbers</span> zorgt voor een kalme en ondersteunende omgeving, zodat uw huisdier zich op zijn gemak <span class="vetgedrukt">voelt</span>.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Klinieksectie met locaties -->
+  <section class="kliniek">
+    <!-- Moduleheader: Deze sectie toont informatie over klinieklocaties -->
+    <h1>Locaties</h1>
+    <p>&quot;Wij geven uw <span class="onderstreep">huisdier</span> de zorg die het <span class="onderstreep">verdient</span>.&quot;</p>
+    <div class="afbeeldingen-van-kliniek">
+      <!-- Kolommen met afbeeldingen en namen van klinieklocaties -->
+      <div class="kliniek-col">
+        <figure>
+          <img src="images/kliniek-optie2.jpg" alt="Kliniek Amsterdam">
+          <figcaption>Kliniek Amsterdam</figcaption>
+        </figure>
+      </div>
+      <div class="kliniek-col">
+        <figure>
+          <img src="images/Florida emergency hospital thinks big.jpg" alt="Kliniek 's-Hertogenbosch">
+          <figcaption>Kliniek 's-Hertogenbosch</figcaption>
+        </figure>
+      </div>
+      <div class="kliniek-col">
+        <figure>
+          <img src="images/kliniek rotterdam.jpg" alt="Kliniek Rotterdam">
+          <figcaption>Kliniek Rotterdam</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <!--Grafiek van Excel-->
+  <section class="grafiek">
+    <div>
+      <h1>Animals Save Fundation</h1>
+      <figure>
+        <img src="images/image (1).png" alt="Grafiek tabel van Excel">
+        <figcaption>Help jij ook mee? <a href="https://animalfoundation.com/" target="_blank">Kliek hier voor meer info</a></figcaption>
+      </figure>
+    </div>
+  </section>
+  <!-- Reviewssectie met klantbeoordelingen -->
+  <section class="reviews">
+    <!-- Moduleheader: Deze sectie toont klantbeoordelingen -->
+    <h1>Wat klanten zeggen over Animal Clinic?</h1>
+    <p>Meer dan <span class="onderstreep">25.000</span> reviews!</p>
+    <div class="reviews-box">
+      <div class="reviews-col">
+        <!-- Klantafbeelding en beoordelingstekst van klant 1 -->
+        <img src="images/images.jpg" alt="Klantafbeelding 1">
+        <div>
+          <p>Na een onverwachte noodsituatie met mijn geliefde hond, bracht ik hem naar de Animal Clinic. Ik was overweldigd door de zorg en professionaliteit van het hele team. Ze reageerden onmiddellijk en stelden me gerust in een stressvolle tijd. De dierenarts was uiterst deskundig en nam de tijd om de diagnose en behandelingsmogelijkheden grondig met me te bespreken. Mijn hond kreeg de benodigde operatie en herstelde snel.</p>
+          <h3>Erik van Zaantem</h3>
+          <!-- Sterbeoordeling van klant 1 -->
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+      </div>
+      <div class="reviews-col">
+        <!-- Klantafbeelding en beoordelingstekst van klant 2 -->
+        <img src="images/rhobh-season-13-erika.jpg" alt="Klantafbeelding 2">
+        <div>
+          <p>Ik ben al jarenlang een trouwe klant bij Animal Clinic en ben nog nooit teleurgesteld geweest. Het team van dierenartsen en het ondersteunend personeel zijn buitengewoon bekwaam en vriendelijk. Ze hebben mijn huisdieren door routinecontroles, vaccinaties, en enkele ziektes begeleid. Ze gaan altijd de extra mijl om mijn vragen te beantwoorden en me te voorzien van nuttig advies voor het welzijn van mijn huisdieren.</p>
+          <h3>Erika de Bloem</h3>
+          <!-- Sterbeoordeling van klant 2 -->
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Social Media sectie met informatie over Animal Clinic en sociale media-pictogrammen -->
+  <section class="social-media">
+    <!-- Moduleheader: Deze sectie bevat informatie over de kliniek en sociale media-pictogrammen -->
+    <h4>About Us</h4>
+    <p>Bij Animal Clinic zijn we meer dan alleen een dierenkliniek; we zijn een toegewijd team van dierenliefhebbers die gepassioneerd zijn over het bieden van uitzonderlijke zorg voor uw geliefde huisdieren.</p>
+    <!-- Pictogrammen voor sociale media met koppelingen naar externe websites -->
+    <div class="icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #e68200;"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" style="color: #e68200;"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #e68200;"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in" style="color: #e68200;"></i></a>
+    </div>
+    <p>Gemaakt door Kamil<i class="fas fa-rocket" style="color: #e68200;"></i></p>
+  </section>
+</body>
+</html>
